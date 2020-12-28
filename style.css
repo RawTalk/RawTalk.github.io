@@ -24,8 +24,14 @@ body {
 }
 
 #container {
-    width: min(100vw - 20px, 1200px);
+    width: min(100vw, 1200px);
     margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    #container {
+        width: min(100vw - 20px, 1200px);
+    }
 }
 
 
