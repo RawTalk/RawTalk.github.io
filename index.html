@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>RAW TALK &#8211; Talk it out! Mental health, social, and spiritual issues affecting Muslims!</title>
+    <link rel="icon" href="img/cropped-Logo-32x32.png" sizes="32x32" />
+    <link rel="icon" href="img/cropped-Logo-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="img/cropped-Logo-180x180.png" />
+    <meta name="msapplication-TileImage" content="img/cropped-Logo-270x270.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        
+        <!-- welcome panel -->
+        <div id="welcome" class="load-hidden">
+            <div id="welcome__title">Welcome to Raw Talk</div>
+            <div id="welcome__details">We're an Islamic community that talks about mental health, social issues, spiritual issues and everything in between.</div>
+        </div>
+
+        <!-- socials panel -->
+        <div style="position: relative;">
+            <div id="socialsContainer" class="load-hidden">
+                <div id="socialsPanel" class="eventItem">
+                    <div id="logo" class="eventItem__icon"></div>
+                    <div id="welcome__socials" class="eventItem__textGroup">
+                        <div class="eventItem__title">Feel free to <div style="padding: 3px 8px; background-color: rgb(27, 28, 36); border-radius: 5px; color: #fff; display: inline-block">join us</div> on</div>
+                        <div id="welcome__socials__icons">
+                            <a href="https://bit.ly/3hiQX9X" target="_blank"><div class="icon-href socialsReveal load-hidden"><img src="img/whatsapp.svg" alt="" class="icon whatsapp"><br>WhatsApp</div></a>
+                            <a href="https://discord.gg/NWmAAtR" target="_blank"><div class="icon-href socialsReveal load-hidden"><img src="img/discord.svg" alt="" class="icon discord"><br>Discord</div></a>
+                            <a href="https://www.instagram.com/raw_is_talk" target="_blank"><div class="icon-href socialsReveal load-hidden"><img src="img/instagram.svg" alt="" class="icon instagram"><br>Instagram</div></a>
+                            <a href="#" target="_blank"><div class="icon-href socialsReveal load-hidden"><img src="img/facebook.svg" alt="" class="icon facebook"><br>Facebook</div></a>
+                            <a href="https://anchor.fm/raw-podcasts" target="_blank"><div class="icon-href socialsReveal load-hidden"><img src="img/anchor.svg" alt="" class="icon anchor"><br>Anchor.fm</div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- merch banner -->
+            <div id="merchBannerContainer" class="socialsReveal load-hidden">
+                <a href="#">
+                    <div style="height: 100%; width: 100%; background-image: url('img/merch_background_blur.jpg'); background-size: cover; ">
+                        <div style="text-align: center; position: relative; top: 50%; transform: translateY(-50%); font-size: 36px; font-weight: bold; color: #fff;">
+                            Merch
+                            <div style="font-size: 14px;">coming soon</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- ask private questions -->
+        <div id="googleFormContainer" class="load-hidden sendQuestionContainer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSex7cgwwARzO6U1leDuoDIUw6SvdXmQ4l-VbvcbY610ZjthYA/viewform" target="_blank">
+                <div id="googleForm" class="sendQuestion">
+                    If you have 
+                    <div style="padding: 3px 8px; background-color: #524c66; color: #fff; border-radius: 5px; display: inline-block;">
+                        personal matters 
+                    </div> 
+                    that you want to discuss <strong>anonymously</strong>, we're here to help. <br>
+                    Tell us your situation via 
+                    <strong>Google Forms</strong>.
+                </div>
+            </a>
+        </div>
+
+        <!-- podcast panel -->
+        <div id="podcastContainer" class="load-hidden">
+            <a href="#" target="_blank" class="eventItem" id="podcast">
+                <div class="eventItem__icon" id="podcast__icon"></div>
+                <div class="eventItem__textGroup">
+
+                    <div class="eventItem__date" id="podcast__date"></div>
+                    <div class="eventItem__title" id="podcast__title"></div>
+
+                    <div style="display: flex; position: relative;">
+                        <div style="display: inline-block; flex-basis: calc(100% - 60px);">
+                            <div class="eventItem__details" id="podcast__details"></div>
+                        </div>
+                        <div style="display: inline-block; flex-basis: 60px; text-align: center; font-size: 10px; position: absolute; bottom: 0; right: 0;">
+                            <img src="img/anchor.svg" alt="" class="icon anchor" style="height: 30px;"><br>On Anchor.fm
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+        <!-- send us questions for podcast -->
+        <!-- <div id="sendQuestionContainer" class="load-hidden sendQuestionContainer">
+            <a href="" target="_blank">
+                <div id="sendQuestion" class="sendQuestion">
+                    You can 
+                    <div style="padding: 3px 8px; background-color: #f05454; color: #fff; border-radius: 5px; display: inline-block;">
+                        suggest a topic
+                    </div> 
+                    for us to talk on our <strong>podcast</strong>.
+                </div>
+            </a>
+        </div> -->
+
+        <!-- calendar panel -->
+        <div id="calendarContainer" class="load-hidden calendarContainer">
+            <div id="calendar" class="calendar">
+                <div id="calendar_title" class="calendar__title">Events Calendar</div>
+                <div id="calendar__details" class="calendar__details">We have our zoom meeting on every Friday 7pm (UK time)<br>Join our <a href="https://bit.ly/3hiQX9X" class="textLink">WhatsApp group</a> for more info</div>
+                <iframe id="calendar__iframe" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=b2NuYXJmY2hhbkBnbWFpbC5jb20&amp;color=%23039BE5&amp;showTitle=0&amp;showNav=1&amp;showTabs=1&amp;title" style="border-width:0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+
+        <!-- associates panel -->
+        <div id="associatesContainer" class="calendarContainer">
+            <div id="associates" class="calendar">
+                <div id="associates__title" class="calendar__title">Our Associates</div>
+                <div id="associates__details" class="calendar__details">A huge thank you for our associates for joining Raw Talk</div>
+                <div class="associates__itemContainer">
+                    <div class="associates__item load-hidden">
+                        <a href="https://instagram.com/bijouarabesque?igshid=zya8tdayqlxu" target="_blank">
+                            <div>
+                                <img src="img/bijou_arabesque_logo.jpg" class="associates__item__icon"></img>
+                                <div class="associates__item__texts">
+                                    <div class="associates__item__title">Bijou Arabesque</div>
+                                    <div class="associates__item__details">Fashion</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="associates__item load-hidden">
+                        <a href="https://instagram.com/afterschooldawah?igshid=1hm02aqk2hdw8" target="_blank">
+                            <div>
+                                <img src="img/afterschool_dawah_logo.jpg" class="associates__item__icon"></img>
+                                <div class="associates__item__texts">
+                                    <div class="associates__item__title">Afterschool Dawah</div>
+                                    <div class="associates__item__details">Podcast</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="associates__item load-hidden">
+                        <a href="https://chat.whatsapp.com/Iy2VgKYjEyZLfDd2pxaILD" target="_blank">
+                            <div>
+                                <img src="img/think_quran.png" class="associates__item__icon"></img>
+                                <div class="associates__item__texts">
+                                    <div class="associates__item__title">Think Quran</div>
+                                    <div class="associates__item__details">Classes</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            2020 RAW TALK
+        </footer>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

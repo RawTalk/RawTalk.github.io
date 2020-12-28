@@ -1,0 +1,429 @@
+body {
+    /* background-color: rgb(255, 255, 255); */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    cursor: default;
+    min-height: 100%;
+
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+#container {
+    width: min(100vw - 20px, 1200px);
+    margin: 0 auto;
+}
+
+
+html.sr .load-hidden {
+    visibility: hidden;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS */
+    html.sr .load-hidden {
+        visibility: visible;
+    }
+}
+
+a { /* disable <a> default styling */
+    text-decoration: none; 
+    color: inherit;
+}
+
+.textLink {
+    color:rgb(0, 162, 255);
+    transition: 0.1s all ease;
+    padding: 2px 5px;
+    line-height: 200%;
+}
+
+.textLink:hover {
+    background-color: rgba(255,255,255,0.9);
+}
+
+::selection { background: #ffb7b7; /* WebKit/Blink Browsers */ }
+::-moz-selection { background: #ffb7b7; /* Gecko Browsers */ }
+
+#logo {
+    height: 50px;
+    background-image: url("img/RawTalkLogo.svg");
+    background-size: cover;
+}
+
+#welcome__socials__icons {
+    margin-top: 20px;
+    margin-left: -8px;
+}
+
+.icon {
+    height: 40px;
+}
+
+.icon-href {
+    font-size: 14px;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 0 0px;
+    transition: 0.2s all ease;
+    text-align: center;
+    border: 2px dashed rgba(0,0,0,0);
+}
+
+.icon-href:hover {
+    border: 2px dashed #30475e5f;
+}
+
+#welcome {
+    padding: 20px 20px;
+    background-color: #f8af6b;
+}
+
+#welcome__title {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px; 
+    margin: -10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+#welcome__details {
+    font-size: 18px;
+}
+
+#socialsPanel {
+    cursor: default;
+}
+
+#merchBannerContainer {
+    height: 80px; 
+    margin-bottom: 20px;
+}
+@media (min-width: 600px) {
+    #merchBannerContainer {
+        margin-left: 40px; 
+        margin-right: 40px;
+    }
+}
+@media (min-width: 1000px) {
+    #merchBannerContainer {
+        display: inline-block; 
+        height: 140px; 
+        position: absolute; 
+        right: 40px; 
+        top: 20px; 
+        width: calc(100% - 800px);
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.eventItem {
+    display: flex;
+    padding: 20px 20px;
+    transition: 0.1s all ease;
+    cursor: pointer;
+}
+
+.eventItem__icon {
+    height: 50px;
+    flex-basis: 50px;
+    display: inline-block;
+    border-radius: 8px;
+    margin-right: 15px;
+    transition: 0.1s all ease;
+}
+
+#podcast {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+#podcast__icon {
+    background-image: url("img/podcast_icon.jpg");
+    background-size: cover;
+}
+
+#podcast__date{
+    background-color: #f05454;
+}
+
+.eventItem__textGroup {
+    flex-basis: calc(100% - 50px - 15px);
+}
+
+.eventItem__date {
+    display: inline-block;
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Calibri';
+    margin-bottom: 10px;
+}
+
+.eventItem__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.eventItem__details {
+    font-size: 16px;
+}
+
+#podcast {
+    background-color: #e8e8e8;
+}
+
+.sendQuestion {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+
+.calendar {
+    margin: 20px 20px;
+    width: calc(100% - 40px);
+}
+
+.calendar__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.calendar__details {
+    margin-bottom: 10px;
+}
+
+.associates__itemContainer {
+    margin-top: 20px;
+}
+
+.associates__item {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.associates__item__icon {
+    width: 60px;
+    border-radius: 10px;
+}
+
+.associates__item__texts {
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
+
+.associates__item__title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+footer {
+    color: rgb(150,150,150);
+    text-align: center;
+    font-size: 14px;
+    font-family: 'calibri';
+    padding: 20px;
+}
+
+@media (min-width: 600px) {
+
+    #logo {
+        height: 140px;
+        margin-left: 0;
+    }
+
+    #welcome {
+        margin: 20px 40px;
+        padding: 20px 20px;
+    }
+
+    #welcome__title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 28px;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: -10px 0px 10px -10px;
+    }
+
+    #welcome__details {
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
+
+    #welcome__socials {
+        font-size: 24px;
+    }
+
+    #welcome__socials__icons {
+        text-align: left;
+    }
+
+    .icon {
+        height: 50px;
+    }
+    
+    .icon-href {
+        font-size: 14px;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: 0.1s all ease;
+    }
+
+    .eventItem {
+        display: flex;
+        padding: 20px 20px;
+        transition: 0.1s all ease;
+        margin: 20px 20px;
+        cursor: pointer;
+    }
+
+    .eventItem__icon {
+        height: 140px;
+        flex-basis: 140px;
+        display: inline-block;
+        border-radius: 8%;
+        margin-right: 15px;
+        transition: 0.1s all ease;
+    }
+
+    .eventItem:hover .eventItem__icon:not(#logo) {
+        transform: scale(calc(150/140));
+    }
+
+    .eventItem__textGroup {
+        flex-basis: calc(100% - 140px);
+    }
+
+    .eventItem__date {
+        display: inline-block;
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-family: 'Calibri';
+        margin-bottom: 14px;
+    }
+
+    .eventItem__title {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 18px;
+    }
+
+    .eventItem__details {
+        font-size: 18px;
+    }
+
+    #podcast {
+        background-color: #fff;
+        border-radius: 15px;
+        border: 2px dashed rgba(0,0,0,0);
+        padding: 18px;
+    }
+
+    #podcast:hover {
+        border: 2px dashed #30475e5f;
+    }
+
+    .sendQuestionContainer {
+        text-align: center;
+    }
+
+    .sendQuestion {
+        border: 2px dashed rgba(0,0,0,0);
+        transition: 0.2s all ease;
+        border-radius: 5px;
+    }
+
+    .sendQuestion:hover {
+        border: 2px dashed #30475e5f;
+    } 
+
+    .calendar {
+        margin: 20px auto;
+        width: calc(100% - 40px);
+    }
+
+    .calendarContainer {
+        margin: 0 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #calendarContainer {
+        background-color: rgb(231, 235, 247);
+    }
+
+    .calendar__title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding: none;
+        text-align: center;
+    }
+
+    .calendar__details {
+        text-align: center;
+        padding: 10px;
+        background: rgba(255,255,255,0.3);
+        border-radius: 10px;
+    }
+
+    .associates__itemContainer {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .associates__item {
+        display: inline-block;
+        width: 200px;
+        margin: 10px 10px;
+    }
+
+    .associates__item__icon {
+        width: 100%;
+        transition: 0.2s all ease;
+        border-radius: 10px;
+    }
+
+    .associates__item__texts {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .associates__item__title {
+        font-size: 18px;
+    }
+
+    .associates__item:hover .associates__item__icon {
+        transform: scale(1.05) translateY(-5px);
+    }
+    
+}
