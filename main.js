@@ -6,8 +6,7 @@ ScrollReveal().reveal('#googleFormContainer', { delay: 900, scale: 1})
 ScrollReveal().reveal('#podcastContainer', { delay: 1200, scale: 0.9, distance: '10px', container: 'body'});
 ScrollReveal().reveal('#sendQuestionContainer', { delay: 1300, scale: 0.5})
 ScrollReveal().reveal('#calendarContainer', {delay: 1300, scale: 0.9, distance: '10px', container: 'body'});
-// ScrollReveal().reveal('#calendar__details', {delay: 1500, scale: 1, container: 'body'});
-ScrollReveal().reveal('.associates__item', { interval: 100, scale: 0.3, viewFactor: 0.8});
+ScrollReveal().reveal('.associates__item', { interval: 100, scale: 0.3, viewFactor: 0.6});
 
 // helper functions
 function $(x) {return document.querySelector(x);}

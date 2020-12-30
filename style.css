@@ -196,10 +196,20 @@ a { /* disable <a> default styling */
     background-color: #e8e8e8;
 }
 
-.sendQuestion {
-    display: inline-block;
+#googleForm {
     margin-bottom: 30px;
-    padding: 10px 20px;
+    padding: 20px 0;
+    text-align: center;
+    background-image: url('img/chatBoxes.svg');
+    background-repeat: repeat;
+}
+
+#googleForm__textbox {
+    background-color: rgba(51, 86, 102, 0.7); 
+    color: #fff; 
+    padding: 10px; 
+    border-radius: 10px; 
+    display: inline-block;
 }
 
 .calendar {
@@ -351,19 +361,24 @@ footer {
         border: 2px dashed #30475e5f;
     }
 
-    .sendQuestionContainer {
-        text-align: center;
+    #googleFormContainer {
+        padding: 0 40px;
     }
 
-    .sendQuestion {
-        border: 2px dashed rgba(0,0,0,0);
-        transition: 0.2s all ease;
-        border-radius: 5px;
+    #googleForm {
+        border-radius: 10px;
     }
 
-    .sendQuestion:hover {
-        border: 2px dashed #30475e5f;
-    } 
+    #googleForm__textbox {
+        transition: 0.3s all ease;
+        font-size: 18px;
+    }
+
+    #googleForm:hover #googleForm__textbox {
+        padding-right: 30px;
+        padding-left: 30px;
+        background-color: rgba(51, 86, 102, 0.8);
+    }
 
     .calendar {
         margin: 20px auto;

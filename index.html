@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
     <div id="container">
@@ -58,16 +57,13 @@
         </div>
 
         <!-- ask private questions -->
-        <div id="googleFormContainer" class="load-hidden sendQuestionContainer">
+        <div id="googleFormContainer" class="load-hidden">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSex7cgwwARzO6U1leDuoDIUw6SvdXmQ4l-VbvcbY610ZjthYA/viewform" target="_blank">
-                <div id="googleForm" class="sendQuestion">
-                    If you have 
-                    <div style="padding: 3px 8px; background-color: #524c66; color: #fff; border-radius: 5px; display: inline-block;">
-                        personal matters 
-                    </div> 
-                    that you want to discuss <strong>anonymously</strong>, we're here to help. <br>
-                    Tell us your situation via 
-                    <span class="textLink">Google Forms</span>.
+                <div id="googleForm">
+                    <div id="googleForm__textbox">
+                        Need to talk about <strong>personal issues</strong>?
+                        <br><span style="font-size: 14px;">Fill out this Google Forms and we will contact you.</span>
+                    </div>
                 </div>
             </a>
         </div>
@@ -94,19 +90,6 @@
             </a>
         </div>
 
-        <!-- send us questions for podcast -->
-        <!-- <div id="sendQuestionContainer" class="load-hidden sendQuestionContainer">
-            <a href="" target="_blank">
-                <div id="sendQuestion" class="sendQuestion">
-                    You can 
-                    <div style="padding: 3px 8px; background-color: #f05454; color: #fff; border-radius: 5px; display: inline-block;">
-                        suggest a topic
-                    </div> 
-                    for us to talk on our <strong>podcast</strong>.
-                </div>
-            </a>
-        </div> -->
-
         <!-- calendar panel -->
         <div id="calendarContainer" class="load-hidden calendarContainer">
             <div id="calendar" class="calendar">
@@ -120,7 +103,7 @@
         <div id="associatesContainer" class="calendarContainer">
             <div id="associates" class="calendar">
                 <div id="associates__title" class="calendar__title">Our Associates</div>
-                <div id="associates__details" class="calendar__details">A huge thank you for our associates for joining Raw Talk</div>
+                <div id="associates__details" class="calendar__details">A huge thank you to our associates for joining Raw Talk</div>
                 <div class="associates__itemContainer">
                     <div class="associates__item load-hidden">
                         <a href="https://instagram.com/bijouarabesque?igshid=zya8tdayqlxu" target="_blank">
@@ -165,6 +148,7 @@
         <!-- footer -->
         <footer>
             2020 RAW TALK
+            <br><br>For business inquiry, please contact Zakaria at <div style="display: inline-block;">+44 774 928 4101</div>
         </footer>
     </div>
 </body>
