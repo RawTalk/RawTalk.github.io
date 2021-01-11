@@ -126,14 +126,14 @@ a { /* disable <a> default styling */
         margin-right: 40px;
     }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
     #merchBannerContainer {
         display: inline-block; 
         height: 140px; 
         position: absolute; 
         right: 40px; 
         top: 20px; 
-        width: calc(100% - 800px);
+        width: calc(100% - 900px);
         margin-left: 0;
         margin-right: 0;
     }
