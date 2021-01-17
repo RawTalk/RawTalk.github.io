@@ -45,3 +45,24 @@ fetch(PODCAST_RSS_URL)
 
         podcast.href = items__latest.querySelector("link").innerHTML;
     })
+
+// typewriter loop
+const typewriteSpan = $('#typewriteSpan');
+var typewriter = new Typewriter(typewriteSpan, {
+    loop: true,
+    delay: 50,
+    cursor: '_',
+})
+
+typewriter
+    .pauseFor(300)
+    .typeString('join')
+    .pauseFor(2000)
+    .deleteAll(50)
+    .typeString('follow')
+    .pauseFor(2000)
+    .deleteAll(50)
+    .typeString('like')
+    .pauseFor(2000)
+    .deleteAll(50)
+    .start();
