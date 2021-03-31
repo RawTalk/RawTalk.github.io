@@ -17,6 +17,10 @@ function extractCDATA(str) {
     return str;
 }
 
+// set year
+const yearSpan = $('#year');
+yearSpan.innerHTML = new Date().getFullYear();
+
 // fetch latest podcast info from anchor.fm
 const podcast = $('#podcast');
 const podcast__date = $('#podcast__date');
