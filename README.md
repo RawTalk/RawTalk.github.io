@@ -4,6 +4,8 @@
 
 `CNAME` is for the URL configuration, see [Enforce HTTPS in GitHub Pages with Namecheap Domain (youtube video)](https://www.youtube.com/watch?v=FBtehan5DAo&list=LL). Namecheap account belongs to Zakaria.
 
+`README.md` is this file.
+
 `index.html`, `main.js`, and `style.css` are the main HTML, JavaScript, and CSS files.
 
 ## non-static components
