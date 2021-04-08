@@ -14,3 +14,9 @@ Some components have texts that are fetched (on page load) from other websites (
 1. The information of `Latest Podcast` is fetched from Anchor.fm, details are inside `main.js` (search `fetch latest podcast info from anchor.fm`)
 
 2. The Google Calendar embed is in an iframe in `index.html`. The linked Google Calendar belongs to justrawtalk@gmail.com. For password ask Zakaria. However, the text above the iframe that says "We have our zoom meeting on every Saturday 3pm (UK time)" is static, so that needs to be updated manually.
+
+3. The year field at the footer is statically set as 2021, but the JavaScript will replace it to the current year. See `main.js` (search `// set year`)
+
+## Libraries used
+1. `scrollreveal` for revealing components when scroll reaches them.
+2. `typewriter` for type writing the "Feel free to join -> follow -> like us"
