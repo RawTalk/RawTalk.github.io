@@ -23,22 +23,22 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reveal.css">
 </head>
 <body>
     <div id="container">
         
         <!-- welcome panel -->
-        <div id="welcome" class="load-hidden">
+        <div id="welcome" class="revealContainer">
             <div id="welcome__title">Welcome to Raw Talk</div>
             <div id="welcome__details">We're an Islamic community that talks about mental health, social issues, spiritual issues and everything in between.</div>
         </div>
 
         <!-- socials panel -->
         <div style="position: relative;">
-            <div id="socialsContainer" class="load-hidden">
+            <div id="socialsContainer" class="revealContainer">
                 <div id="socialsPanel" class="eventItem">
                     <div id="logo" class="eventItem__icon"></div>
                     <div id="welcome__socials" class="eventItem__textGroup">
@@ -69,7 +69,7 @@
         </div>
 
         <!-- ask private questions -->
-        <div id="googleFormContainer" class="load-hidden">
+        <div id="googleFormContainer" class="revealContainer">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSex7cgwwARzO6U1leDuoDIUw6SvdXmQ4l-VbvcbY610ZjthYA/viewform" target="_blank">
                 <div id="googleForm">
                     <div id="googleForm__textbox">
@@ -81,7 +81,7 @@
         </div>
 
         <!-- podcast panel -->
-        <div id="podcastContainer" class="load-hidden">
+        <div id="podcastContainer" class="revealContainer">
             <a href="#" target="_blank" class="eventItem" id="podcast">
                 <div class="eventItem__icon" id="podcast__icon"></div>
                 <div class="eventItem__textGroup">
@@ -103,7 +103,7 @@
         </div>
 
         <!-- calendar panel -->
-        <div id="calendarContainer" class="load-hidden calendarContainer">
+        <div id="calendarContainer" class="calendarContainer revealContainer">
             <div id="calendar" class="calendar">
                 <div id="calendar_title" class="calendar__title">Events Calendar</div>
                 <div id="calendar__details" class="calendar__details">We have our zoom meeting on every Saturday 3pm (UK time)<br>Join our <a href="https://chat.whatsapp.com/JuRvK8L89568J7TwoWIaZU" class="textLink" target="_blank">WhatsApp group</a> for more info</div>
@@ -177,4 +177,5 @@
     </div>
 </body>
 <script src="main.js"></script>
+<script src="reveal.js"></script>
 </html>

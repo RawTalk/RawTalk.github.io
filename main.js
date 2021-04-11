@@ -1,15 +1,6 @@
-// scroll reveal elements
-ScrollReveal().reveal('#welcome', { delay: 0, scale: 0.9, container: 'body'});
-ScrollReveal().reveal('#socialsContainer',{ delay: 250, scale: 0.9, distance: '10px', container: 'body'});
-ScrollReveal().reveal('.socialsReveal', { interval: 120, scale: 0.7, container: 'body'});
-ScrollReveal().reveal('#googleFormContainer', { delay: 900, scale: 1})
-ScrollReveal().reveal('#podcastContainer', { delay: 1200, scale: 0.9, distance: '10px', container: 'body'});
-ScrollReveal().reveal('#sendQuestionContainer', { delay: 1300, scale: 0.5})
-ScrollReveal().reveal('#calendarContainer', {delay: 1300, scale: 0.9, distance: '10px', container: 'body'});
-ScrollReveal().reveal('.associates__item', { interval: 100, scale: 0.3, viewFactor: 0.6});
-
 // helper functions
 function $(x) {return document.querySelector(x);}
+function classArray(x) {return document.getElementsByClassName(x);}
 
 function extractCDATA(str) {
     str = str.replace("<![CDATA[","");
