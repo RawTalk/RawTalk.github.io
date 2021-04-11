@@ -33,16 +33,6 @@ body {
 }
 
 
-html.sr .load-hidden {
-    visibility: hidden;
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    /* IE10+ CSS */
-    html.sr .load-hidden {
-        visibility: visible;
-    }
-}
-
 a { /* disable <a> default styling */
     text-decoration: none; 
     color: inherit;
@@ -303,7 +293,7 @@ footer {
         padding: 10px;
         border-radius: 5px;
         margin-right: 10px;
-        transition: 0.1s all ease;
+        transition: 0.1s all ease !important;
     }
 
     .eventItem {

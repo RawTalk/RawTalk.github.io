@@ -18,5 +18,4 @@ Some components have texts that are fetched (on page load) from other websites (
 3. The year field at the footer is statically set as 2021, but the JavaScript will replace it to the current year. See `main.js` (search `// set year`)
 
 ## Libraries used
-1. `scrollreveal` for revealing components when scroll reaches them.
-2. `typewriter` for type writing the "Feel free to join -> follow -> like us"
+1. `typewriter` for type writing the "Feel free to join -> follow -> like us"
