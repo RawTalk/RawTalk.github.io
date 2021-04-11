@@ -8,6 +8,8 @@
 
 `index.html`, `main.js`, and `style.css` are the main HTML, JavaScript, and CSS files.
 
+`reveal.css`, and `reveal.js` are the CSS and JavaScript files for revealing components on page load / scroll.
+
 ## non-static components
 Some components have texts that are fetched (on page load) from other websites (eg Anchor.fm or Google Calendar) so web developers don't need to manually update those components.
 

@@ -3,6 +3,14 @@
     transition: all 0.3s ease;
 }
 
+/* disable scroll reveal for IE */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS */
+    .load-hidden {
+        opacity: 1;
+    }
+}
+
 .reveal {
     opacity: 1 !important;
     transform: scale(1) !important;
@@ -12,14 +20,29 @@
     transform: scale(0.8);
 }
 
-#merchBannerContainer {
+.associates__item {
+    transform: scale(0.5);
+}
+
+
+/* reveal container sequentially */
+.revealContainer {
+    opacity: 0;
+}
+
+.revealContainer:not(#welcome) {
     transform: scale(0.8);
 }
 
-#googleFormContainer {
-    transform: scale(0.8);
+@keyframes revealContainer_sequence { 
+	100% { 
+        opacity: 1;
+        transform: scale(1);
+    }
 }
-
-#podcastContainer {
-    transform: scale(0.8);
-}
+.revealContainer {animation: revealContainer_sequence .4s forwards;}
+.revealContainer:nth-child(1) { animation-delay: 0.2s;}
+.revealContainer:nth-child(2) { animation-delay: 0.4s;}
+.revealContainer:nth-child(3) { animation-delay: 0.6s;}
+.revealContainer:nth-child(4) { animation-delay: 0.8s;}
+.revealContainer:nth-child(5) { animation-delay: 1.0s;}
