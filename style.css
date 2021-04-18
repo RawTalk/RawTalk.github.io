@@ -201,6 +201,11 @@ a { /* disable <a> default styling */
     border-radius: 10px; 
     display: inline-block;
 }
+     
+#gfmContainer {
+    min-height: 190px; /* medium embed height */
+    margin-bottom: 20px;
+}
 
 .calendar {
     margin: 20px 20px;
