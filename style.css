@@ -201,10 +201,38 @@ a { /* disable <a> default styling */
     border-radius: 10px; 
     display: inline-block;
 }
-     
+
 #gfmContainer {
-    min-height: 190px; /* medium embed height */
+    margin-top: 30px;
     margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+#gfm__text {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+    #gfmContainer {
+        padding: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    #gfmContainer {
+        display: flex;
+        min-height: 190px; /* medium embed height */
+    }
+
+    #gfm__text {
+        margin-right: 20px;
+        margin-bottom: 0;
+        flex-basis: calc(100% - 400px - 20px);
+    }
+
+    .gfm-embed {
+        flex-basis: 400px;
+    }
 }
 
 .calendar {
