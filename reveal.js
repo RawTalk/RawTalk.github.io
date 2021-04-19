@@ -17,16 +17,11 @@ function shouldReveal(el, screenFactor) {
 }
 
 // define scroll reveal elements (uses $ function in main.js)
-const socialsIcons = classArray('socialsReveal');
 const associates__item = classArray('associates__item');
 
 window.onscroll = onScroll;
 
 function onScroll() {
-
-    if (shouldReveal(socialsIcons[0], 3/4)) {
-        revealSequence(socialsIcons, 100);
-    }
 
     if (shouldReveal(associates__item[0], 5/6)) {
         revealSequence(associates__item, 100);
