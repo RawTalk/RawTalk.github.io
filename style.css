@@ -238,7 +238,6 @@ a { /* disable <a> default styling */
 
 .calendar {
     margin: 20px 20px;
-    margin-top: 50px;
     width: calc(100% - 40px);
 }
 
