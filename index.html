@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="sr">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4722Z0J5P4"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-4722Z0J5P4');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -26,6 +16,8 @@
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reveal.css">
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
     <div id="container">
@@ -116,7 +108,8 @@
             <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
         </div>
 
-        <div class="calendarContainer" style="text-align: center; padding: 10px; background: rgba(233, 245, 254, 1); margin-bottom:30px">
+        <!-- twitter latest feed -->
+        <div class="calendarContainer" id="twitterFeed" style="text-align: center; padding: 10px; background: rgba(233, 245, 254, 1); margin-bottom:30px">
             <a class="twitter-timeline"
                 data-width="500" 
                 data-theme="light" 
@@ -124,7 +117,7 @@
                 data-chrome="noheader, nofooter, noborders, transparent, noscrollbar"
                 href="https://twitter.com/raw_is_talk">
                 A Twitter List by TwitterDev
-            </a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </a>
         </div>
 
         <!-- calendar panel -->
