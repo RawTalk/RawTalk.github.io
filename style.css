@@ -444,6 +444,7 @@ footer {
         display: inline-block;
         width: 200px;
         margin: 10px 10px;
+        vertical-align: top;
     }
 
     .associates__item__icon {
