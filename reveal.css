@@ -22,7 +22,7 @@
 
 
 /* reveal container sequentially */
-.revealContainer {
+/* .revealContainer {
     opacity: 0;
 }
 
@@ -56,3 +56,4 @@
 .icon-href__reveal:nth-child(4) { animation-delay: 0.23s;}
 .icon-href__reveal:nth-child(5) { animation-delay: 0.27s;}
 .icon-href__reveal:nth-child(6) { animation-delay: 0.31s;}
+*/
