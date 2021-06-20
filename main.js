@@ -61,3 +61,73 @@ typewriter
     .pauseFor(2000)
     .deleteAll(50)
     .start();
+
+
+// drag horizontal slider (personal projects)
+const slider = document.querySelector('.scrollList__itemGroup');
+let mouseDown = false;
+let startX, scrollLeft;
+
+const body = $('body');
+
+let startDragging = function(e) {
+    mouseDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+};
+let stopDragging = function(e) {
+    mouseDown = false;
+    body.classList.remove("dragstart");
+};
+
+slider.addEventListener('mousemove', (e) => {
+    e.preventDefault();
+    if(!mouseDown) { return; }
+    const x = e.pageX - slider.offsetLeft;
+    const scroll = x - startX;
+    slider.scrollLeft = scrollLeft - scroll;
+    body.classList.add("dragstart");
+});
+
+// Add the event listeners
+slider.addEventListener('mousedown', startDragging, false);
+slider.addEventListener('mouseup', stopDragging, false);
+slider.addEventListener('mouseleave', stopDragging, false);
+
+// scroll arrow
+const scrollLeftArrow = $('#scrollList__leftArrow');
+const scrollRightArrow = $('#scrollList__rightArrow');
+
+let slideToLeft = function(e) {
+    slider.scrollBy({ 
+        top: 0,
+        left: -slider.offsetWidth*0.7, 
+        behavior: 'smooth' 
+    });
+}
+let slideToRight = function(e) {
+    slider.scrollBy({ 
+        top: 0,
+        left: +slider.offsetWidth*0.7, 
+        behavior: 'smooth' 
+    });
+}
+scrollLeftArrow.addEventListener('mousedown', slideToLeft, false);
+scrollRightArrow.addEventListener('mousedown', slideToRight, false);
+disableSlideArrow(slider);
+function disableSlideArrow(slider) {
+    if (slider.scrollLeft <= 0) {
+        scrollLeftArrow.classList.add('ArrowDisabled');
+    } else {
+        scrollLeftArrow.classList.remove('ArrowDisabled');
+    }
+    if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) {
+        scrollRightArrow.classList.add('ArrowDisabled');
+    } else {
+        scrollRightArrow.classList.remove('ArrowDisabled');
+    }
+}
+let scrolling = function(e) {
+    disableSlideArrow(slider);
+}
+slider.addEventListener('scroll', scrolling, false);

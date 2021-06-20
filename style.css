@@ -32,6 +32,24 @@ body {
     }
 }
 
+.navBar {
+    background-color: #FCDEC0;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.navButton {
+    padding: 10px 20px;
+    background-color: #7D5A50;
+    color: #fff;
+    display: inline-block;
+    transition: 0.2s ease all;
+    margin: 10px 5px 10px 5px;
+}
+.navButton:hover {
+    background-color: #B4846C;
+}
+
 
 a { /* disable <a> default styling */
     text-decoration: none; 
@@ -467,4 +485,109 @@ footer {
         transform: scale(1.05) translateY(-5px);
     }
     
+}
+
+.arrow {
+    border: solid rgb(9, 108, 255);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transition: 0.1s all ease;
+}
+
+.roundButton:hover .arrow {
+    border-color: #fff;
+}
+
+.right {transform: rotate(-45deg); -webkit-transform: rotate(-45deg);}
+.left {transform: rotate(135deg); -webkit-transform: rotate(135deg);}
+.up {transform: rotate(-135deg); -webkit-transform: rotate(-135deg);}
+.down {transform: rotate(45deg); -webkit-transform: rotate(45deg);}
+
+
+.scrollList {
+    position: relative;
+    text-align: center;
+    margin: 20px 20px;
+    background-color: #CEE5D0;
+    overflow-y: hidden;
+}
+@media (min-width: 800px) {
+    .scrollList {
+        margin: 20px 40px;
+    }
+}
+
+.scrollList__title {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    background-color: #2F5D62;
+    position: relative;
+    padding: 10px 20px;
+    transition: 0.2 ease all;
+}
+
+.scrollList__title:hover {
+    background-color: #5E8B7E;
+}
+
+.scrollList__Arrow {
+    position: absolute;
+    top: 17px;
+    padding: 6px !important;
+    cursor: pointer;
+    border-width: 0 4px 4px 0 !important;
+    border-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.scrollList__Arrow.ArrowDisabled {
+    opacity: 0.3;
+    cursor: default;
+}
+#scrollList__leftArrow {
+    left: 15px;
+}
+#scrollList__rightArrow {
+    right: 15px;
+}
+
+.scrollList__itemGroup {
+    padding: 20px 10px;
+    overflow: auto;
+    white-space: nowrap;
+    cursor: grab;
+}
+.scrollList__itemGroup:active {
+    cursor: grabbing;
+}
+@media (min-width: 800px) {
+    .scrollList__itemGroup {
+        padding: 40px 20px;
+    }
+}
+
+.scrollList__item {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollList__itemGroup::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollList__itemGroup {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* if dragging, then prevent video click */
+.dragstart iframe {
+    pointer-events: none;
+} 
+
+.scrollList__item iframe {
+    height: 180px;
+    width: 300px;
 }
