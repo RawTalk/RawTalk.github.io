@@ -41,6 +41,7 @@
             max-height: 50vh;
             height: 500px;
             width: 100%;
+            display: block;
         }
 
         body {
@@ -79,6 +80,18 @@
             background-color: #B4846C;
         }
 
+        #resetViewBtn {
+            background-color: #bbb19f;
+            padding: 10px 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.2s ease all;
+        }
+
+        #resetViewBtn:hover {
+            background-color: #b6906d;
+        }
+
     </style>
 </head>
 <body>
@@ -112,6 +125,7 @@
         <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
 
         <canvas class="webgl"></canvas>
+        <div id="resetViewBtn">Reset View</div>
     </div>
 </body>
 
@@ -244,6 +258,14 @@
     }
     
     tick()
+
+    // reset view button
+    const resetViewBtn = document.querySelector('#resetViewBtn')
+    resetViewBtn.addEventListener('click', (event) => {
+        camera.position.x = cameraDistX
+        camera.position.y = cameraDistY
+        camera.position.z = cameraDistZ
+    })
     
 </script>
 
