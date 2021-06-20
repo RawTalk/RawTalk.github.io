@@ -229,6 +229,7 @@
     // Controls
     const controls = new OrbitControls(camera, canvas)
     controls.enableDamping = true
+    controls.saveState()
     
     // Renderer
     const renderer = new THREE.WebGLRenderer({
@@ -262,9 +263,7 @@
     // reset view button
     const resetViewBtn = document.querySelector('#resetViewBtn')
     resetViewBtn.addEventListener('click', (event) => {
-        camera.position.x = cameraDistX
-        camera.position.y = cameraDistY
-        camera.position.z = cameraDistZ
+        controls.reset()
     })
     
 </script>
