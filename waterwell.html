@@ -35,6 +35,16 @@
             }
         }
 
+        #waterWell_word_headline {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .numSpan {
+            font-weight: bold;
+        }
+
         .webgl {
             margin-top: 20px;
             max-width: 500px;
@@ -108,6 +118,11 @@
     <div style="display: inline-block; text-align: center; margin: 0 auto 30px auto; " >
 
         <div id="waterWell_word">
+
+            <div id="waterWell_word_headline">
+                Building <span id="numWells" class="numSpan">15</span> wells, <br> 
+                benefitting <span id="numFamilies" class="numSpan">150</span> families!
+            </div>
             The RAW TALK community, alongside a few other organisations, have decided to fundraise to build water wells for a deprived region in Cambodia. 
             <br><br>
             Due to the way in which they are constructed, these water wells are highly rigid and are therefore able to produce water for as long as they are maintained.
@@ -130,6 +145,27 @@
 </body>
 
 <script type="module">
+
+    // animate numbers 
+    function animateValue(obj, start, end, duration) {
+        let startTimestamp = null
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+            obj.innerHTML = Math.floor(progress * (end - start) + start)
+            if (progress < 1) {
+                window.requestAnimationFrame(step)
+            }
+        }
+        window.requestAnimationFrame(step)
+    }
+
+    const numWells = document.getElementById("numWells")
+    animateValue(numWells, 0, numWells.innerHTML, 1000);
+
+    const numFamilies = document.getElementById("numFamilies")
+    animateValue(numFamilies, 0, numFamilies.innerHTML, 1000);
+
 
     // Find the latest version by visiting https://cdn.skypack.dev/three.
     import * as THREE from 'https://cdn.skypack.dev/three@0.129.0'
