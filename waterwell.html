@@ -39,6 +39,10 @@
             text-align: center;
             font-size: 24px;
             margin-bottom: 20px;
+            opacity: 0;
+        }
+        #waterWell_word_headline.visible {
+            opacity: 1;
         }
 
         .numSpan {
@@ -129,11 +133,11 @@
         </div>
 
         <a href="https://www.facebook.com/RawIsTalk/photos/a.273936844494678/273936334494729" target="_blank">
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRawIsTalk%2Fposts%2F273940001161029&show_text=true&width=500" width="500" height="750" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRawIsTalk%2Fposts%2F273940001161029&show_text=true&width=500" loading="lazy" width="500" height="750" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
         </a>
         
-        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FRawIsTalk%2Fvideos%2F587824722188225%2F&width=500&show_text=false&height=286&appId"   width="500" height="320" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=308&href=https%3A%2F%2Fwww.facebook.com%2FRawIsTalk%2Fvideos%2F1920217758125609%2F&show_text=false&width=560&t=0"    width="500" height="320" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FRawIsTalk%2Fvideos%2F587824722188225%2F&width=500&show_text=false&height=286&appId" loading="lazy" width="500" height="320" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=308&href=https%3A%2F%2Fwww.facebook.com%2FRawIsTalk%2Fvideos%2F1920217758125609%2F&show_text=false&width=560&t=0"  loading="lazy" width="500" height="320" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
         
 
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/5wuz9c-water-well-project/widget/medium/"></div>
@@ -144,7 +148,13 @@
     </div>
 </body>
 
-<script type="module">
+<script>
+
+    const numWells = document.getElementById("numWells")
+    const numFamilies = document.getElementById("numFamilies")
+    const waterWell_word_headline = document.getElementById("waterWell_word_headline")
+    const numWells_innerHTML = numWells.innerHTML
+    const numFamilies_innerHTML = numFamilies.innerHTML
 
     // animate numbers 
     function animateValue(obj, start, end, duration) {
@@ -160,12 +170,17 @@
         window.requestAnimationFrame(step)
     }
 
-    const numWells = document.getElementById("numWells")
-    animateValue(numWells, 0, numWells.innerHTML, 1000);
+    function animateWellWords() {
+        waterWell_word_headline.classList.add('visible')
+        animateValue(numWells, 0, numWells_innerHTML, 1000);
+        animateValue(numFamilies, 0, numFamilies_innerHTML, 1000);
+    }
 
-    const numFamilies = document.getElementById("numFamilies")
-    animateValue(numFamilies, 0, numFamilies.innerHTML, 1000);
+    window.onload = animateWellWords;
 
+</script>
+
+<script type="module">
 
     // Find the latest version by visiting https://cdn.skypack.dev/three.
     import * as THREE from 'https://cdn.skypack.dev/three@0.129.0'
