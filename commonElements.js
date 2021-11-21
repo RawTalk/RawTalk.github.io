@@ -41,3 +41,18 @@ class MySidebar extends HTMLElement {
 }
 
 customElements.define('my-sidebar', MySidebar);
+
+class MyCopyPaster extends HTMLElement {
+    connectedCallback() {
+        let copyText = this.getAttribute('data-copytext');
+        this.innerHTML = '<div class="copyPaste" data-copytext="' + copyText + '" onclick="copyText(this)"></div><div class="copiedPopup">Copied</div>';
+    }
+}
+if (!isiOS()) {
+    customElements.define('my-copypaster', MyCopyPaster);
+}
+
+// check if it's iOS
+function isiOS() {
+    return navigator.userAgent.match(/ipad|iphone/i);
+}

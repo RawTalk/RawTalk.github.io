@@ -68,9 +68,10 @@ function changeTwitterTheme(darkLightFrom, darkLightTo) {
     }
 }
 
-// copy text button callback
-function copyText(text, that) {
-    navigator.clipboard.writeText(text);
+function copyText(that) {
+    text = that.getAttribute('data-copytext');
+    
+    navigator.clipboard.writeText("123");  
     that.classList.add('clicked');
-    setTimeout( function(){ that.classList.remove('clicked');; }, 1000);
+    setTimeout( function(){ that.classList.remove('clicked'); }, 1000);
 }
