@@ -70,8 +70,7 @@ function changeTwitterTheme(darkLightFrom, darkLightTo) {
 
 function copyText(that) {
     text = that.getAttribute('data-copytext');
-    
-    navigator.clipboard.writeText("123");  
+    navigator.clipboard.writeText(text);  
     that.classList.add('clicked');
     setTimeout( function(){ that.classList.remove('clicked'); }, 1000);
 }
