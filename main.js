@@ -67,3 +67,10 @@ function changeTwitterTheme(darkLightFrom, darkLightTo) {
         }
     }
 }
+
+// copy text button callback
+function copyText(text, that) {
+    navigator.clipboard.writeText(text);
+    that.classList.add('clicked');
+    setTimeout( function(){ that.classList.remove('clicked');; }, 1000);
+}
