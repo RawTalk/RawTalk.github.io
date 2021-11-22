@@ -27,8 +27,6 @@ class MySidebar extends HTMLElement {
                     </a>
                     <div id="darkThemeToggle">Dark Theme</div>
                     <div><span id="year">2021</span> RAW TALK</div>
-                    <div id="businessInquiry">For business inquiry, <br>
-                        please contact Zakaria at <br>+44 774 928 4101</div>
                 </div>
             </div>
         `;

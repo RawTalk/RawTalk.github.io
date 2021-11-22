@@ -287,10 +287,6 @@ body.dark #footer {
     color: #ccc;
 }
 
-#businessInquiry {
-    margin-top: 15px;
-}
-
 #container {
     background-color: #F7F7FA;
     margin: var(--container-margin);
