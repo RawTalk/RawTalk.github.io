@@ -6,9 +6,11 @@
 
 `README.md` is this file.
 
-`index.html`, `main.js`, and `style.css` are the main HTML, JavaScript, and CSS files.
+`index.html` is the homepage.
 
-`reveal.css`, and `reveal.js` are the CSS and JavaScript files for revealing components on page load / scroll.
+`commonElements.js` contains common elements (such as **side bar**) that can appear on all pages.
+
+`main.js` and `style.css` are the common JavaScript and CSS for all pages.
 
 ## non-static components
 Some components have texts that are fetched (on page load) from other websites (eg Anchor.fm or Google Calendar) so web developers don't need to manually update those components.
@@ -19,7 +21,9 @@ Some components have texts that are fetched (on page load) from other websites (
 
 3. Twitter latest feed.
 
-4. The year field at the footer is statically set as 2021, but the JavaScript will replace it to the current year. See `main.js` (search `// set year`)
+4. The year field at the bottom of the side bar is statically set as 2021, but the JavaScript will replace it to the current year. See `main.js` (search `// set year`)
 
 ## Libraries used
 1. `typewriter` for type writing the "Feel free to join -> follow -> like us"
+
+2. `threeJS` for water well 3D model, in "water well project" page.
