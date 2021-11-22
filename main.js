@@ -1,11 +1,5 @@
 function $(x) {return document.querySelector(x);}
 
-function extractCDATA(str) {
-    str = str.replace("<![CDATA[","");
-    str = str.replace("]]>","");
-    return str;
-}
-
 let sideBarButton = $('#sideBarButton');
 let sideBar = $('#sideBar');
 let modalCover = $('#modalCover');

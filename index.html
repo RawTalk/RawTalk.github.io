@@ -517,6 +517,12 @@ hideRegistrationStepsContainer__div.addEventListener('click', function() {
     localStorage.setItem('isRegHidden', isRegistrationHidden.toString());
 })
 
+function extractCDATA(str) {
+    str = str.replace("<![CDATA[","");
+    str = str.replace("]]>","");
+    return str;
+}
+
 // fetch latest podcast info from anchor.fm
 const podcast = $('#podcast');
 const podcast__date = $('#podcast__date');
