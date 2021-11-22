@@ -139,6 +139,10 @@ body.dark .navButton:hover.active {
     background-color: #4d575e;
 }
 
+.navButton.inactiveButton {
+    cursor: default;
+}
+
 #footer__needSupport {
     margin-bottom: 20px;
     padding: 5px;

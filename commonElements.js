@@ -12,11 +12,11 @@ class MySidebar extends HTMLElement {
 
             <div id="sideBar">
                 <a href="./"><div class="navButton">🏡 Home</div></a>
-                <a><div class="navButton">📘 About Us <span class="comingSoon">coming soon</span></div></a>
+                <a><div class="navButton inactiveButton">📘 About Us <span class="comingSoon">coming soon</span></div></a>
                 <a href="events"><div class="navButton">📅 Events</div></a>
-                <a><div class="navButton">🧾 Blog <span class="comingSoon">coming soon</span></div></a>
+                <a><div class="navButton inactiveButton">🧾 Blog <span class="comingSoon">coming soon</span></div></a>
                 <a href="waterwell"><div class="navButton">🌊 Water Well Project</div></a>
-                <a><div class="navButton">🍩 Donate <span class="comingSoon">coming soon</span></div></a>
+                <a><div class="navButton inactiveButton">🍩 Donate <span class="comingSoon">coming soon</span></div></a>
                 <a href="contactus"><div class="navButton">📞 Contact Us </div></a>
 
                 <div id="footer">
