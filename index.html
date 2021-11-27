@@ -384,10 +384,11 @@
                 <div class="section">
                     <!-- calendar panel -->
                     <div class="sectionHeader" style="position: relative">
-                        Events Calendar 
-                        <a href="events"><span class="sectionHeaderButton">view full</span></a>
+                        Event 
+                        <a href="events"><span class="sectionHeaderButton">view all</span></a>
                     </div>
-                    <iframe id="calendar__iframe" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23e3e9fe&amp;ctz=Europe%2FLondon&amp;src=cjEzZ2s4OW1vbG1vbjl2OTg5dm9vcGFzbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;mode=AGENDA&amp;showTitle=0&amp;showDate=0&amp;showNav=1&amp;showTabs=1&amp;showPrint=0&amp;showCalendars=0" style="border-width:0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+                    <div id="calendarItemContainer"></div>
+                    <!-- <iframe id="calendar__iframe" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23e3e9fe&amp;ctz=Europe%2FLondon&amp;src=cjEzZ2s4OW1vbG1vbjl2OTg5dm9vcGFzbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;mode=AGENDA&amp;showTitle=0&amp;showDate=0&amp;showNav=1&amp;showTabs=1&amp;showPrint=0&amp;showCalendars=0" style="border-width:0" width="100%" height="400" frameborder="0" scrolling="no"></iframe> -->
                 </div>
             </div>
 
@@ -553,6 +554,37 @@ fetch(PODCAST_RSS_URL)
         podcast__details.innerHTML = pubDetails;
 
         podcast.href = items__latest.querySelector("link").innerHTML;
+    })
+
+// fetch google calendar event
+const monthStr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+const calendarItemContainer = $('#calendarItemContainer')
+const calendar_url = "https://francochanco-calendar-api.herokuapp.com/"
+fetch(calendar_url)
+    .then(response => response.text())
+    .then(str => JSON.parse(str))
+    .then(function(data) {
+        data = data.slice(0,2) 
+        data.forEach((ev, i) => {
+            let st = new Date(ev.starttime)
+            let month = monthStr[st.getMonth()]
+            let date = st.getDate()
+            calendarItemContainer.insertAdjacentHTML('beforeend', `
+            <div style="display: grid; grid-template-columns: 80px 1fr; gap: 10px; margin-top: 10px;">
+                <div style="background-color: ${i%2==0? '#66806A' : '#B4C6A6'}; color: #fff; text-align: center; border-radius: 10px; position: relative; min-height: 80px;">
+                    <div style="position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0;">
+                        <div style="font-size: 36px">${date}</div>
+                        <div style="font-size: 24px; margin-top: -10px; margin-bottom: 3px">${month}</div>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-size: 24px">${ev.title}
+                    </div>
+                    <div>${ev.description}</div>
+                </div>
+            </div>
+            `)
+        });
     })
 
 // typewriter loop
