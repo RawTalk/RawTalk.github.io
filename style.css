@@ -2,6 +2,7 @@ body {
     font-family: 'Lato', sans-serif;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 body.dark {
     background-color: #192024;
@@ -192,6 +193,7 @@ body.dark #darkThemeToggle:hover {
 span.highlight {
     background-color: #7893;
     padding: 1px 3px 3px 3px;
+    display: inline-block;
 }
 body.dark span.highlight {
     background-color: rgba(170, 187, 204, 0.2);
@@ -455,6 +457,19 @@ body.dark .hoverFill--blue {
     padding-left: 0;
 }
 
+.post__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.post__tag {
+    background: rgba(88, 90, 92, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
 /* @media (max-width: 750px) { */
 @media (max-width: 900px) {
     #sideBar {
@@ -486,4 +501,10 @@ body.dark .hoverFill--blue {
     .section--iconText {
         grid-template-columns: 70px 1fr;
     }
+}
+
+.giant {
+    font-size: 48px !important;
+    text-align: center;
+    margin-bottom: 20px;
 }

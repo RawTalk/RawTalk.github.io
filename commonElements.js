@@ -29,28 +29,28 @@ class MySidebar extends HTMLElement {
                     <div><span id="year">2021</span> RAW TALK</div>
                 </div>
             </div>
-        `;
+        `
 
         // make current page navButton active
-        let navButton = document.getElementsByClassName('navButton');
-        let index = parseInt(this.getAttribute('data-navID'));
-        navButton[index].classList.add('active');
+        let navButton = document.getElementsByClassName('navButton')
+        let index = parseInt(this.getAttribute('data-navID'))
+        navButton[index].classList.add('active')
     }
 }
 
-customElements.define('my-sidebar', MySidebar);
+customElements.define('my-sidebar', MySidebar)
 
 class MyCopyPaster extends HTMLElement {
     connectedCallback() {
-        let copyText = this.getAttribute('data-copytext');
-        this.innerHTML = '<div class="copyPaste" data-copytext="' + copyText + '" onclick="copyText(this)"></div><div class="copiedPopup">Copied</div>';
+        let copyText = this.getAttribute('data-copytext')
+        this.innerHTML = '<div class="copyPaste" data-copytext="' + copyText + '" onclick="copyText(this)"></div><div class="copiedPopup">Copied</div>'
     }
 }
 if (!isiOS()) {
-    customElements.define('my-copypaster', MyCopyPaster);
+    customElements.define('my-copypaster', MyCopyPaster)
 }
 
 // check if it's iOS
 function isiOS() {
-    return navigator.userAgent.match(/ipad|iphone/i);
+    return navigator.userAgent.match(/ipad|iphone/i)
 }

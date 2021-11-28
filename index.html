@@ -21,6 +21,9 @@
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
     #registrationStepsContainer {
+
+    }
+    #registrationStepsContainer__gridLayout {
         display: grid; 
         grid-template-columns: 1.4fr 0.9fr 0.5fr; 
         gap: 15px; 
@@ -45,7 +48,7 @@
         background-color: rgba(255, 255, 255, 0.1);
     }
     @media (max-width: 1150px) {
-        #registrationStepsContainer {
+        #registrationStepsContainer__gridLayout {
             grid-template-columns: 1.4fr 1fr; 
         }
         #hideRegistrationStepsContainer {
@@ -53,7 +56,7 @@
         }
     }
     @media (max-width: 950px) {
-        #registrationStepsContainer {
+        #registrationStepsContainer__gridLayout {
             grid-template-columns: 1fr; 
         }
     }
@@ -116,11 +119,6 @@
     #podcast__icon {
         background-image: url("img/podcast_icon.jpg");
         background-color: #000;
-    }
-    #podcast__title {
-        font-size: 1.6rem;
-        font-weight: 700;
-        margin-bottom: 10px;
     }
     #goFundMe_section_split {
         display: grid;
@@ -231,7 +229,7 @@
         <div id="container__container">
 
             <!-- welcome -->
-            <div id="welcomeHeader" class="sectionHeader">
+            <div id="welcomeHeader" class="sectionHeader giant">
                 Welcome to <span class="highlight">RAW TALK</span>
             </div>
             <div id="welcome" class="section section--iconText">
@@ -253,51 +251,54 @@
             </div>
 
             <div id="registrationStepsContainer" style="margin-bottom: 10px">
-                <div style="display: grid; grid-template-rows: 1fr; gap: 15px;">
-                    <div class="section hoverFillParent" id="joinWhatsAppContainer">
-                        <a href="https://chat.whatsapp.com/JuRvK8L89568J7TwoWIaZU"  target="_blank">
-                            <div class="sectionHeader">Step 1: Join our WhatsApp 
-                                <img src="img/whatsapp.svg" alt="" id="whatsAppIcon">
+                <!-- <div class="sectionHeader" style="font-size: 32px; text-align: center;">Join Us</div> -->
+                <div id="registrationStepsContainer__gridLayout">
+                    <div style="display: grid; grid-template-rows: 1fr; gap: 15px;">
+                        <div class="section hoverFillParent" id="joinWhatsAppContainer">
+                            <a href="https://chat.whatsapp.com/JuRvK8L89568J7TwoWIaZU"  target="_blank">
+                                <div class="sectionHeader">Step 1: Join our WhatsApp 
+                                    <img src="img/whatsapp.svg" alt="" id="whatsAppIcon">
+                                </div>
+                                <div class="hoverFill hoverFill--blue"></div>
+                                <div class="newTab"></div>
+                            </a>
+                        </div>
+                        <div class="section" id="registrationFormContainer">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUCetC01DSZANnCpG3pdtBDOWPk_BzUErzds3IWvIJIBkywA/viewform" target="_blank">
+                                <div class="sectionHeader">Step 2: Register</div>
+                                <div class="newTab"></div>
+                                <div id="registrationFormPNG"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- socials -->
+                    <div class="section" style="margin-bottom: 0">
+                        <div class="sectionHeader" style="font-size: 1.2rem">
+                            Optionally: 
+                            <div style="padding: 3px 8px; background-color: rgb(27, 28, 36); border-radius: 5px; color: #fff; display: inline-block">
+                                <span id="typewriteSpan">Join</span>us
+                            </div> 
+                            on
+                        </div>
+                        <div id="welcome__socials__icons">
+                            <!-- <a href="https://chat.whatsapp.com/JuRvK8L89568J7TwoWIaZU"  target="_blank"><div class="icon-href"><img src="img/whatsapp.svg"  alt="" class="icon"><br>WhatsApp    </div></a> -->
+                            <a href="https://discord.gg/NWmAAtR"                        target="_blank"><div class="icon-href"><img src="img/discord.svg"   alt="" class="icon"><br>Discord     </div></a>
+                            <a href="https://t.me/joinchat/HTSAxMuVxM4hS9oH"            target="_blank"><div class="icon-href"><img src="img/telegram.svg"  alt="" class="icon"><br>Telegram    </div></a>
+                            <a href="https://www.instagram.com/raw_is_talk"             target="_blank"><div class="icon-href"><img src="img/instagram.svg" alt="" class="icon"><br>Instagram   </div></a>
+                            <a href="https://www.facebook.com/RawIsTalk"                target="_blank"><div class="icon-href"><img src="img/facebook.svg"  alt="" class="icon"><br>Facebook    </div></a>
+                            <a href="https://twitter.com/raw_is_talk"                   target="_blank"><div class="icon-href"><img src="img/twitter.svg"   alt="" class="icon"><br>Twitter     </div></a>
+                            <a href="https://anchor.fm/raw-podcasts"                    target="_blank"><div class="icon-href"><img src="img/anchor.svg"    alt="" class="icon"><br>Anchor      </div></a>
+                        </div>
+                    </div>
+
+                    <div class="section" id="registrationDone">
+                        <div class="sectionHeader">Done!</div>
+                        <div style="text-align: center;">
+                            <div class="bigEmoji">👋</div>
+                            <div style="padding: 0 10px 20px 10px">
+                                Say hello to our WhatsApp group!
                             </div>
-                            <div class="hoverFill hoverFill--blue"></div>
-                            <div class="newTab"></div>
-                        </a>
-                    </div>
-                    <div class="section" id="registrationFormContainer">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUCetC01DSZANnCpG3pdtBDOWPk_BzUErzds3IWvIJIBkywA/viewform" target="_blank">
-                            <div class="sectionHeader">Step 2: Register</div>
-                            <div class="newTab"></div>
-                            <div id="registrationFormPNG"></div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- socials -->
-                <div class="section" style="margin-bottom: 0">
-                    <div class="sectionHeader" style="font-size: 1.2rem">
-                        Optionally: 
-                        <div style="padding: 3px 8px; background-color: rgb(27, 28, 36); border-radius: 5px; color: #fff; display: inline-block">
-                            <span id="typewriteSpan">Join</span>us
-                        </div> 
-                        on
-                    </div>
-                    <div id="welcome__socials__icons">
-                        <!-- <a href="https://chat.whatsapp.com/JuRvK8L89568J7TwoWIaZU"  target="_blank"><div class="icon-href"><img src="img/whatsapp.svg"  alt="" class="icon"><br>WhatsApp    </div></a> -->
-                        <a href="https://discord.gg/NWmAAtR"                        target="_blank"><div class="icon-href"><img src="img/discord.svg"   alt="" class="icon"><br>Discord     </div></a>
-                        <a href="https://t.me/joinchat/HTSAxMuVxM4hS9oH"            target="_blank"><div class="icon-href"><img src="img/telegram.svg"  alt="" class="icon"><br>Telegram    </div></a>
-                        <a href="https://www.instagram.com/raw_is_talk"             target="_blank"><div class="icon-href"><img src="img/instagram.svg" alt="" class="icon"><br>Instagram   </div></a>
-                        <a href="https://www.facebook.com/RawIsTalk"                target="_blank"><div class="icon-href"><img src="img/facebook.svg"  alt="" class="icon"><br>Facebook    </div></a>
-                        <a href="https://twitter.com/raw_is_talk"                   target="_blank"><div class="icon-href"><img src="img/twitter.svg"   alt="" class="icon"><br>Twitter     </div></a>
-                        <a href="https://anchor.fm/raw-podcasts"                    target="_blank"><div class="icon-href"><img src="img/anchor.svg"    alt="" class="icon"><br>Anchor      </div></a>
-                    </div>
-                </div>
-
-                <div class="section" id="registrationDone">
-                    <div class="sectionHeader">Done!</div>
-                    <div style="text-align: center;">
-                        <div class="bigEmoji">👋</div>
-                        <div style="padding: 0 10px 20px 10px">
-                            Say hello to our WhatsApp group!
                         </div>
                     </div>
                 </div>
@@ -330,13 +331,23 @@
                 <div class="section section--iconText" style="position: relative;">
                     <div class="section__icon" id="podcast__icon"></div>
                     <div class="section__textGroup">
-                        <div id="podcast__title"></div>
-                        <div id="podcast__details"></div>
+                        <div id="podcast__title" class="post__title"></div>
+                        <div id="podcast__details" class="post__details"></div>
                         <div class="newTab"></div>
                     </div>
                     <div class="hoverFill"></div>
                 </div>
             </a>
+
+            <!-- Latest Blog Post -->
+            <!-- <div id="blogPostsContainer">
+                <div class="sectionHeader" style="position: relative">
+                    Blog
+                    <a href="blog"><span class="sectionHeaderButton" style="top: auto">view more</span></a>
+                    <div class="section__date" id="blogDate"></div>
+                </div>
+                <div id="blogPosts" data-count=1></div>
+            </div> -->
 
             <!-- Water Well Project -->
             <div class="sectionHeader">
@@ -387,7 +398,7 @@
                         Event 
                         <a href="events"><span class="sectionHeaderButton">view all</span></a>
                     </div>
-                    <div id="calendarItemContainer"></div>
+                    <div id="calendarItemContainer" style="margin-top: -10px"></div>
                     <!-- <iframe id="calendar__iframe" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23e3e9fe&amp;ctz=Europe%2FLondon&amp;src=cjEzZ2s4OW1vbG1vbjl2OTg5dm9vcGFzbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;mode=AGENDA&amp;showTitle=0&amp;showDate=0&amp;showNav=1&amp;showTabs=1&amp;showPrint=0&amp;showCalendars=0" style="border-width:0" width="100%" height="400" frameborder="0" scrolling="no"></iframe> -->
                 </div>
             </div>
@@ -490,76 +501,77 @@
     </div>
 </body>
 <script src="main.js"></script>
+<!-- <script src="blog.js"></script> -->
 <script>
-let hideRegistrationStepsContainer__div = $('#hideRegistrationStepsContainer__div');
-let registrationStepsContainer = $('#registrationStepsContainer');
-var isRegistrationHidden = false;
+let hideRegistrationStepsContainer__div = $('#hideRegistrationStepsContainer__div')
+let registrationStepsContainer = $('#registrationStepsContainer')
+let isRegistrationHidden = false
 
-var isRegHidden = eval(localStorage.getItem('isRegHidden'));
-if (isRegHidden !== null) {isRegistrationHidden = isRegHidden;}
+let isRegHidden = eval(localStorage.getItem('isRegHidden'))
+if (isRegHidden !== null) {isRegistrationHidden = isRegHidden}
 if (isRegistrationHidden) {
-    hideRegistration();
+    hideRegistration()
 }
 
 function hideRegistration() {
-    registrationStepsContainer.classList.add('hidden');
-    isRegistrationHidden = true;
-    hideRegistrationStepsContainer__div.innerHTML = 'Unhide Registration Steps';
+    registrationStepsContainer.classList.add('hidden')
+    isRegistrationHidden = true
+    hideRegistrationStepsContainer__div.innerHTML = 'Unhide Registration Steps'
 }
 function unhideRegistration() {
-    registrationStepsContainer.classList.remove('hidden');
-    isRegistrationHidden = false;
-    hideRegistrationStepsContainer__div.innerHTML = 'Hide Registration Steps';
+    registrationStepsContainer.classList.remove('hidden')
+    isRegistrationHidden = false
+    hideRegistrationStepsContainer__div.innerHTML = 'Hide Registration Steps'
 }
 
 hideRegistrationStepsContainer__div.addEventListener('click', function() {
     if (isRegistrationHidden) {
-        unhideRegistration();
+        unhideRegistration()
     } else {
-        hideRegistration();
+        hideRegistration()
     }
-    localStorage.setItem('isRegHidden', isRegistrationHidden.toString());
+    localStorage.setItem('isRegHidden', isRegistrationHidden.toString())
 })
 
 function extractCDATA(str) {
-    str = str.replace("<![CDATA[","");
-    str = str.replace("]]>","");
-    return str;
+    str = str.replace("<![CDATA[","")
+    str = str.replace("]]>","")
+    return str
 }
 
 // fetch latest podcast info from anchor.fm
-const podcast = $('#podcast');
-const podcast__date = $('#podcast__date');
-const podcast__title = $('#podcast__title');
-const podcast__details = $('#podcast__details');
-const PODCAST_RSS_URL = "https://anchor.fm/s/3bc51044/podcast/rss";
+const podcast = $('#podcast')
+const podcast__date = $('#podcast__date')
+const podcast__title = $('#podcast__title')
+const podcast__details = $('#podcast__details')
+const PODCAST_RSS_URL = "https://anchor.fm/s/3bc51044/podcast/rss"
 
 fetch(PODCAST_RSS_URL)
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
     .then(data => {
-        const items = data.querySelectorAll("item");
-        let items__latest = items[0];
+        const items = data.querySelectorAll("item")
+        let items__latest = items[0]
         
-        let pubDate = items__latest.querySelector("pubDate").innerHTML;
-        let pubTitle = items__latest.querySelector("title").innerHTML;
-        let pubDetails = items__latest.querySelector("description").innerHTML;
+        let pubDate = items__latest.querySelector("pubDate").innerHTML
+        let pubTitle = items__latest.querySelector("title").innerHTML
+        let pubDetails = items__latest.querySelector("description").innerHTML
 
-        pubDate = pubDate.substring(5, 16); // extract date
-        pubTitle = extractCDATA(pubTitle);
-        pubDetails = extractCDATA(pubDetails);
+        pubDate = pubDate.substring(5, 16) // extract date
+        pubTitle = extractCDATA(pubTitle)
+        pubDetails = extractCDATA(pubDetails)
 
-        podcast__date.innerHTML = pubDate;
-        podcast__title.innerHTML = pubTitle;
-        podcast__details.innerHTML = pubDetails;
+        podcast__date.innerHTML = pubDate
+        podcast__title.innerHTML = pubTitle
+        podcast__details.innerHTML = pubDetails
 
-        podcast.href = items__latest.querySelector("link").innerHTML;
+        podcast.href = items__latest.querySelector("link").innerHTML
     })
 
 // fetch google calendar event
 const monthStr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const calendarItemContainer = $('#calendarItemContainer')
-const calendar_url = "https://francochanco-calendar-api.herokuapp.com/"
+const calendar_url = "https://rawtalk-calendar-api.herokuapp.com/"
 fetch(calendar_url)
     .then(response => response.text())
     .then(str => JSON.parse(str))
@@ -569,27 +581,30 @@ fetch(calendar_url)
             let st = new Date(ev.starttime)
             let month = monthStr[st.getMonth()]
             let date = st.getDate()
+            let description = ev.description
+            if (description==null || description=='') {
+                description = 'Join our WhatsApp group to find out more info.'
+            }
             calendarItemContainer.insertAdjacentHTML('beforeend', `
-            <div style="display: grid; grid-template-columns: 80px 1fr; gap: 10px; margin-top: 10px;">
-                <div style="background-color: ${i%2==0? '#66806A' : '#B4C6A6'}; color: #fff; text-align: center; border-radius: 10px; position: relative; min-height: 80px;">
+            <div style="display: grid; grid-template-columns: 100px 1fr; gap: 10px; margin-top: 10px;">
+                <div style="background-color: ${i%2==0? '#66806A' : '#B4C6A6'}; color: #fff; text-align: center; border-radius: 10px; position: relative; min-height: 100px; ">
                     <div style="position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0;">
-                        <div style="font-size: 36px">${date}</div>
-                        <div style="font-size: 24px; margin-top: -10px; margin-bottom: 3px">${month}</div>
+                        <div style="font-size: 42px">${date}</div>
+                        <div style="font-size: 28px; margin-top: -10px; margin-bottom: 3px">${month}</div>
                     </div>
                 </div>
                 <div>
-                    <div style="font-size: 24px">${ev.title}
-                    </div>
-                    <div>${ev.description}</div>
+                    <div class="post__title">${ev.title}</div>
+                    <div>${description}</div>
                 </div>
             </div>
             `)
-        });
+        })
     })
 
 // typewriter loop
-const typewriteSpan = $('#typewriteSpan');
-var typewriter = new Typewriter(typewriteSpan, {
+const typewriteSpan = $('#typewriteSpan')
+let typewriter = new Typewriter(typewriteSpan, {
     loop: true,
     delay: 50,
     cursor: '_',
@@ -606,7 +621,7 @@ typewriter
     .typeString('Like')
     .pauseFor(2000)
     .deleteAll(50)
-    .start();
+    .start()
 
 </script>
 </html>
