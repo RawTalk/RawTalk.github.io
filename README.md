@@ -2,6 +2,8 @@
 
 `img` folder contains images
 
+`mesh` folder contains the 3D model assets used by the `threeJS` water well 3D model
+
 `CNAME` is for the URL configuration, see [Enforce HTTPS in GitHub Pages with Namecheap Domain (youtube video)](https://www.youtube.com/watch?v=FBtehan5DAo&list=LL). Namecheap account belongs to Zakaria.
 
 `README.md` is this file.
@@ -21,7 +23,11 @@ Some components have texts that are fetched (on page load) from other websites (
 
 3. Twitter latest feed.
 
-4. The year field at the bottom of the side bar is statically set as 2021, but the JavaScript will replace it to the current year. See `main.js` (search `// set year`)
+4. Event items are fetched from [RAW TALK CalendarAPI on HerokuApp](rawtalk-calendar-api.herokuapp.com/), which is a proxy that fetches events data from RAW TALK google calendar ical link. 
+
+5. The year field at the bottom of the side bar is statically set as 2021, but the JavaScript will replace it to the current year. See `main.js` (search `// set year`)
+
+
 
 ## Libraries used
 1. `typewriter` for type writing the "Feel free to join -> follow -> like us"
