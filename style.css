@@ -508,3 +508,14 @@ body.dark .hoverFill--blue {
     text-align: center;
     margin-bottom: 20px;
 }
+
+.scrollShow {
+    opacity: 0;
+    transition: 0.4s ease opacity, 0.4s ease transform;
+    transform: translateY(-20px);
+}
+
+.scrollShow.show {
+    opacity: 1;
+    transform: none;
+}

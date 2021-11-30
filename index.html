@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="scrollShow.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
     #welcome__socials__icons {
@@ -229,7 +230,7 @@
             <div id="welcomeHeader" class="sectionHeader giant">
                 Welcome to <span class="highlight">RAW TALK</span>
             </div>
-            <div id="welcome" class="section section--iconText">
+            <div id="welcome" class="section section--iconText scrollShow" data-scroll-show-element-percent=0>
                 <div class="section__icon" id="welcome__icon"></div>
                 <div class="section__textGroup">
                     RAW TALK is a place for 
@@ -251,7 +252,7 @@
                 <!-- <div class="sectionHeader" style="font-size: 32px; text-align: center;">Join Us</div> -->
                 <div id="registrationStepsContainer__gridLayout">
                     <div style="display: grid; grid-template-rows: 1fr; gap: 15px;">
-                        <div class="section hoverFillParent" id="joinWhatsAppContainer">
+                        <div class="section hoverFillParent scrollShow" id="joinWhatsAppContainer" data-scroll-show-element-percent=0>
                             <a href="https://chat.whatsapp.com/JuRvK8L89568J7TwoWIaZU"  target="_blank">
                                 <div class="sectionHeader">Step 1: Join our WhatsApp 
                                     <img src="img/whatsapp.svg" alt="" id="whatsAppIcon">
@@ -260,7 +261,7 @@
                                 <div class="newTab"></div>
                             </a>
                         </div>
-                        <div class="section" id="registrationFormContainer">
+                        <div class="section scrollShow" id="registrationFormContainer" data-scroll-show-element-percent=0>
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUCetC01DSZANnCpG3pdtBDOWPk_BzUErzds3IWvIJIBkywA/viewform" target="_blank">
                                 <div class="sectionHeader">Step 2: Register</div>
                                 <div class="newTab"></div>
@@ -270,7 +271,7 @@
                     </div>
 
                     <!-- socials -->
-                    <div class="section" style="margin-bottom: 0">
+                    <div class="section scrollShow" style="margin-bottom: 0">
                         <div class="sectionHeader" style="font-size: 20px">
                             Optionally: 
                             <div style="padding: 3px 8px; background-color: rgb(27, 28, 36); border-radius: 5px; color: #fff; display: inline-block">
@@ -289,7 +290,7 @@
                         </div>
                     </div>
 
-                    <div class="section" id="registrationDone">
+                    <div class="section scrollShow" id="registrationDone">
                         <div class="sectionHeader">Done!</div>
                         <div style="text-align: center;">
                             <div class="bigEmoji">👋</div>
@@ -301,14 +302,14 @@
                 </div>
             </div>
 
-            <div id="hideRegistrationStepsContainer">
+            <div id="hideRegistrationStepsContainer" class="scrollShow">
                 <div id="hideRegistrationStepsContainer__div">
                     Hide Registration Steps
                 </div>
             </div>
 
             <!-- ask private questions -->
-            <div id="privateQuestionContainer" class="section">
+            <div id="privateQuestionContainer" class="section scrollShow">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSex7cgwwARzO6U1leDuoDIUw6SvdXmQ4l-VbvcbY610ZjthYA/viewform" target="_blank">
                     <div id="privateQuestion" style="position: relative;">
                         <div id="privateQuestion__textbox">
@@ -320,12 +321,12 @@
             </div>
 
             <!-- Latest Podcast -->
-            <div class="sectionHeader">
+            <div class="sectionHeader scrollShow">
                 Raw Podcasts
                 <div class="section__date" id="podcast__date"></div>
             </div>
             <a href="#" target="_blank" id="podcast" class="hoverFillParent">
-                <div class="section section--iconText" style="position: relative;">
+                <div class="section section--iconText scrollShow" style="position: relative;">
                     <div class="section__icon" id="podcast__icon"></div>
                     <div class="section__textGroup">
                         <div id="podcast__title" class="post__title"></div>
@@ -347,12 +348,12 @@
             </div> -->
 
             <!-- Water Well Project -->
-            <div class="sectionHeader">
+            <div class="sectionHeader scrollShow">
                 Water Well Project
                 <div class="section__date">31 Mar 2021</div>
             </div>
             <div id="goFundMe_section_split">
-                <a href="waterwell.html" class="section hoverFillParent" style="position: relative;">
+                <a href="waterwell.html" class="section hoverFillParent scrollShow" style="position: relative;">
                     <div class="section__textGroup--goFundMe">
                         The RAW TALK community, alongside a few other organisations, 
                         have decided to fundraise to build 
@@ -367,14 +368,14 @@
                     <div class="hoverFill hoverFill--blue"></div>
                     <div class="newTab"></div>
                 </a>
-                <div class="section">
+                <div class="section scrollShow">
                     <div class="gfm-embed" data-url="https://www.gofundme.com/f/water-wells-in-cambodia/widget/medium/"></div>
                     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
                 </div>
             </div>
 
             <div id="twitterCalendarSplit" style="margin-top: 10px;">
-                <div class="section">
+                <div class="section scrollShow">
                     <!-- twitter latest feed -->
                     <div class="sectionHeader">Latest Update</div>
                     <div id="twitterFeed" style="text-align: center;">
@@ -389,7 +390,7 @@
                     </div>
                 </div>
 
-                <div class="section">
+                <div class="section scrollShow">
                     <!-- calendar panel -->
                     <div class="sectionHeader" style="position: relative">
                         Event 
@@ -401,10 +402,10 @@
             </div>
 
             <!-- associates -->
-            <div class="sectionHeader">
+            <div class="sectionHeader scrollShow" data-scroll-show-element-percent=200>
                 Our Associates
             </div>
-            <div class="section">
+            <div class="section scrollShow" data-scroll-show-element-percent=20>
                 A huge thank you to our associates for joining RAW TALK
                 <div class="associates__itemContainer">
                     <div class="associates__item">
@@ -508,6 +509,10 @@ let isRegHidden = eval(localStorage.getItem('isRegHidden'))
 if (isRegHidden !== null) {isRegistrationHidden = isRegHidden}
 if (isRegistrationHidden) {
     hideRegistration()
+    const scrollShowRemove = registrationStepsContainer.getElementsByClassName('scrollShow')
+    for (let i = 0; i < scrollShowRemove.length; i++) {
+        scrollShowRemove[i].classList.add('show')
+    }
 }
 
 function hideRegistration() {
@@ -527,6 +532,7 @@ hideRegistrationStepsContainer__div.addEventListener('click', function() {
     } else {
         hideRegistration()
     }
+    scrollShow.onResize()
     localStorage.setItem('isRegHidden', isRegistrationHidden.toString())
 })
 
@@ -619,6 +625,13 @@ typewriter
     .pauseFor(2000)
     .deleteAll(50)
     .start()
+
+
+
+window.onload = function() {
+    // scroll show
+    scrollShow.addItems()
+}
 
 </script>
 </html>
