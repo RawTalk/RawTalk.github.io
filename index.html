@@ -527,10 +527,13 @@ function unhideRegistration() {
 }
 
 hideRegistrationStepsContainer__div.addEventListener('click', function() {
+    const scrollShowRemove = registrationStepsContainer.getElementsByClassName('scrollShow')
     if (isRegistrationHidden) {
         unhideRegistration()
+        for (let i = 0; i < scrollShowRemove.length; i++) scrollShowRemove[i].classList.remove('show')
     } else {
         hideRegistration()
+        for (let i = 0; i < scrollShowRemove.length; i++) scrollShowRemove[i].classList.add('show')
     }
     scrollShow.onResize()
     localStorage.setItem('isRegHidden', isRegistrationHidden.toString())
