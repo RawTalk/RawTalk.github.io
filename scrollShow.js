@@ -1,6 +1,6 @@
 let scrollShow = {
     items: [], // arary of objects containing DOM element and parameters for scrollShow
-    delay: 0.2, // time delay (seconds) on simutaneously showing elements
+    delay: 0.08, // time delay (seconds) on simutaneously showing elements
     
     // populate this.items to keep track of scrollShow elements
     addItems: function(classname="scrollShow") {
