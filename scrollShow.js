@@ -59,7 +59,7 @@ let scrollShow = {
                 count++
                 el.classList.add(showClass)
             } else if (!isAfterY[i] && alreadyShown[i]) {
-                el.classList.remove(showClass)
+                // el.classList.remove(showClass)
             }
         }
     },
