@@ -12,6 +12,12 @@ modalCover.addEventListener('click', function() {
     modalCover.classList.remove('show')
 })
 
+// set twemoji
+twemoji.parse(document.body, {
+    folder: 'svg',
+    ext: '.svg'
+})
+
 // set year
 const yearSpan = $('#year')
 yearSpan.innerHTML = new Date().getFullYear()

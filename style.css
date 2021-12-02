@@ -12,6 +12,21 @@ body.dark {
 ::selection      { background: #b3c0ce88; /* WebKit/Blink Browsers */ }
 ::-moz-selection { background: #b3c0ce88; /* Gecko Browsers */ }
 
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+
+.attribution {
+    text-align: center;
+}
+
+.attribution a {
+    color: rgb(58, 137, 255);
+}
+
 :root {
     --top-bar-height: 30px;
     --top-bar-padding: 10px;
