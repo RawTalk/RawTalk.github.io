@@ -47,6 +47,8 @@ function toggleDarkTheme(darkLightTheme) {
         changeTwitterTheme('dark', 'light')
         darkThemeToggle.innerHTML = 'Dark Theme'
     }
+    sideBar.classList.remove('show')
+    modalCover.classList.remove('show')
 }
 
 // change twitter theme (dark light)
