@@ -132,6 +132,16 @@
             margin-bottom: 0px;
         }
     }
+    #calendarItemContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    @media (max-width: 1030px) {
+        #calendarItemContainer {
+            grid-template-columns: 1fr;
+        }
+    }
     #privateQuestion {
         margin-bottom: 30px;
         padding: 20px 0;
@@ -365,6 +375,17 @@
                 </a>
             </div>
 
+            <div class="sectionHeader scrollShow" style="position: relative;">
+                Events
+                <a href="events"><span class="sectionHeaderButton" style="top: auto">view all</span></a>
+            </div>
+            <div class="section scrollShow" data-scroll-show-element-percent="20">
+                <!-- calendar panel -->
+                
+                <div id="calendarItemContainer" style="margin-top: -30px"></div>
+                <!-- <iframe id="calendar__iframe" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23e3e9fe&amp;ctz=Europe%2FLondon&amp;src=cjEzZ2s4OW1vbG1vbjl2OTg5dm9vcGFzbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;mode=AGENDA&amp;showTitle=0&amp;showDate=0&amp;showNav=1&amp;showTabs=1&amp;showPrint=0&amp;showCalendars=0" style="border-width:0" width="100%" height="400" frameborder="0" scrolling="no"></iframe> -->
+            </div>
+
             <!-- Latest Podcast -->
             <div class="sectionHeader scrollShow">
                 Raw Podcasts
@@ -381,16 +402,6 @@
                     <div class="hoverFill"></div>
                 </div>
             </a>
-
-            <!-- Latest Blog Post -->
-            <!-- <div id="blogPostsContainer">
-                <div class="sectionHeader" style="position: relative">
-                    Blog
-                    <a href="blog"><span class="sectionHeaderButton" style="top: auto">view more</span></a>
-                    <div class="section__date" id="blogDate"></div>
-                </div>
-                <div id="blogPosts" data-count=1></div>
-            </div> -->
 
             <!-- Water Well Project -->
             <div class="sectionHeader scrollShow">
@@ -420,30 +431,33 @@
             </div>
 
             <div id="twitterCalendarSplit" style="margin-top: 10px;">
-                <div class="section scrollShow" data-scroll-show-element-percent="20">
-                    <!-- twitter latest feed -->
-                    <div class="sectionHeader">Latest Update</div>
-                    <div id="twitterFeed" style="text-align: center;">
-                        <a class="twitter-timeline"
-                            data-width="420" 
-                            data-theme="light"
-                            data-tweet-limit="1" 
-                            data-chrome="noheader, nofooter, noborders, transparent, noscrollbar"
-                            href="https://twitter.com/raw_is_talk">
-                            A Twitter List by TwitterDev
-                        </a>
+                <div>
+                    <div class="sectionHeader scrollShow">Latest Update</div>
+                    <div class="section scrollShow" data-scroll-show-element-percent="20">
+                        <!-- twitter latest feed -->
+                        
+                        <div id="twitterFeed" style="text-align: center;">
+                            <a class="twitter-timeline"
+                                data-width="420" 
+                                data-theme="light"
+                                data-tweet-limit="1" 
+                                data-chrome="noheader, nofooter, noborders, transparent, noscrollbar"
+                                href="https://twitter.com/raw_is_talk">
+                                A Twitter List by TwitterDev
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="section scrollShow" data-scroll-show-element-percent="20">
-                    <!-- calendar panel -->
-                    <div class="sectionHeader" style="position: relative">
-                        Event 
-                        <a href="events"><span class="sectionHeaderButton">view all</span></a>
+                <div></div>
+                <!-- <div id="blogPostsContainer">
+                    <div class="sectionHeader scrollShow" style="position: relative;">
+                        Blog
+                        <a href="blog"><span class="sectionHeaderButton" style="top: auto">view more</span></a>
+                        <div class="section__date" id="blogDate"></div>
                     </div>
-                    <div id="calendarItemContainer" style="margin-top: -30px"></div>
-                    <!-- <iframe id="calendar__iframe" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23e3e9fe&amp;ctz=Europe%2FLondon&amp;src=cjEzZ2s4OW1vbG1vbjl2OTg5dm9vcGFzbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;mode=AGENDA&amp;showTitle=0&amp;showDate=0&amp;showNav=1&amp;showTabs=1&amp;showPrint=0&amp;showCalendars=0" style="border-width:0" width="100%" height="400" frameborder="0" scrolling="no"></iframe> -->
-                </div>
+                    <div class="scrollShow" id="blogPosts" data-count=1></div>
+                </div> -->
             </div>
 
             <!-- associates -->
@@ -549,7 +563,7 @@
     </div>
 </body>
 <script src="main.js"></script>
-<!-- <script src="blog.js"></script> -->
+<script src="blog.js"></script>
 <script>
 let hideRegistrationStepsContainer__div = $('#hideRegistrationStepsContainer__div')
 let registrationStepsContainer = $('#registrationStepsContainer')
