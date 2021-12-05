@@ -20,7 +20,7 @@ class MySidebar extends HTMLElement {
                 <a href="contactus"><div class="navButton">☎️ Contact Us </div></a>
 
                 <div id="footer">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSex7cgwwARzO6U1leDuoDIUw6SvdXmQ4l-VbvcbY610ZjthYA/viewform" target="_blank">
+                    <a href="https://bit.ly/38nHZVY" target="_blank">
                         <div id="footer__needSupport">
                             <div id="footer__needSupport__container">Need Support?</div>
                         </div>
