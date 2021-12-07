@@ -137,6 +137,7 @@
         grid-template-columns: 1fr 1fr;
         gap: 15px;
         min-height: 100px;
+        max-height: 100px;
         transition: 0.2s ease all;
         background-clip: content-box;
         background-color: #f8f8f8;
@@ -687,6 +688,7 @@ fetch(calendar_url)
             element.classList.add('show')
         }
         calendarItemContainer.style.background = 'inherit'
+        calendarItemContainer.style.maxHeight = '1000px' // high value as max height
     })
     .then(() => new Promise((resolve) => setTimeout(resolve, 200)))
     .then(function() {
