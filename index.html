@@ -183,6 +183,14 @@
             grid-template-columns: 1fr;
         }
     }
+    .tokenCalendarItem {
+        min-height: 100px; 
+        background-color: #f8f8f8; 
+        border-radius: 10px;
+    }
+    body.dark .tokenCalendarItem {
+        background-color: #2f343b;  
+    }
     .eventItemContainer {
         display: grid; 
         grid-template-columns: 100px 1fr; 
@@ -381,8 +389,8 @@
             </div>
             <div class="section scrollShow" data-scroll-show-element-percent="20">
                 <div id="calendarItemContainer">
-                    <div style="min-height: 100px; background-color: #f8f8f8; border-radius: 10px"></div>
-                    <div style="min-height: 100px; background-color: #f8f8f8; border-radius: 10px"></div>
+                    <div class="tokenCalendarItem"></div>
+                    <div class="tokenCalendarItem"></div>
                 </div>
             </div>
 
