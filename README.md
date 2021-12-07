@@ -1,5 +1,12 @@
 # website source code
 
+`common` folder contains common JavaScripts and CSS that are used on multiple pages
+- `blog.js` contains JavaScripts that populate the medium blog "embed"
+- `commonElements.js` contains common DOM elements (such as **side bar**) of all pages
+- `initialDarkTheme.js` applies (if appropriate) dark theme before DOM elements creation
+- `main.js` comtains common JavaScript (such has side bar behaviour) of all pages
+- `style.css` contains common CSS of all pages 
+
 `img` folder contains images
 
 `mesh` folder contains the 3D model assets used by the `threeJS` water well 3D model
@@ -10,9 +17,7 @@
 
 `index.html` is the homepage.
 
-`commonElements.js` contains common elements (such as **side bar**) that can appear on all pages.
-
-`main.js` and `style.css` are the common JavaScript and CSS for all pages.
+The other `*.html` files are the other pages.
 
 ## non-static components
 Some components have texts that are fetched (on page load) from other websites (eg Anchor.fm or Google Calendar) so web developers don't need to manually update those components.
