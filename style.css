@@ -408,7 +408,7 @@ body.dark .icon {
 
 .section--iconText {
     display: grid;
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: 115px 1fr;
     gap: var(--section-padding);
     padding: 0;
 }
@@ -482,7 +482,9 @@ body.dark .hoverFill--blue {
     background: rgba(88, 90, 92, 0.5);
     color: #fff;
     padding: 5px 10px;
+    margin-top: 5px;
     margin-right: 5px;
+    display: inline-block;
 }
 
 /* @media (max-width: 750px) { */

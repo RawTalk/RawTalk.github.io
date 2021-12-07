@@ -62,7 +62,7 @@ function drawBlogPosts(blogData) {
         let dout = blogData[i] 
         let categoriesHTML = ''
         dout.categories.forEach(c => {
-            categoriesHTML = `${categoriesHTML} <span class="post__tag">${c}</span>`
+            categoriesHTML = `${categoriesHTML}<div class="post__tag">${c}</div>`
         })
 
         let includePubDate = ''
