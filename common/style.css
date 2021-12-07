@@ -43,7 +43,7 @@ img.emoji {
     position: absolute; /* parent need to be relative */
     top: 5px; 
     right: 5px; 
-    background-image: url('img/newTab.svg'); 
+    background-image: url('../img/newTab.svg'); 
     height: 15px; 
     width: 15px;
 }
@@ -56,7 +56,7 @@ body.dark .newTab {
     position: absolute; /* parent need to be relative */
     right: 8px; 
     top: 8px;
-    background-image: url('img/copyPaste.svg'); 
+    background-image: url('../img/copyPaste.svg'); 
     background-size: cover;
     height: 38px;
     width: 38px; 
@@ -162,7 +162,7 @@ body.dark .navButton:hover.active {
 #footer__needSupport {
     margin-bottom: 20px;
     padding: 5px;
-    background-image: url('img/chatBoxes.svg');
+    background-image: url('../img/chatBoxes.svg');
     background-size: 80px;
     display: inline-block;
     width: 130px;
@@ -272,7 +272,7 @@ body.dark #topBar {
 
 #topBar__logo {
     display: none;
-    background-image: url("img/RawTalkLogo.svg");
+    background-image: url('../img/RawTalkLogo.svg');
     background-repeat: cover;
     position: absolute;
     top: 0;
@@ -487,7 +487,6 @@ body.dark .hoverFill--blue {
     display: inline-block;
 }
 
-/* @media (max-width: 750px) { */
 @media (max-width: 900px) {
     #sideBar {
         left: calc(-1 * var(--side-bar-width) - 2*var(--side-bar-padding));
