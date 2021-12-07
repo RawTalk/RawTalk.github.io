@@ -4,7 +4,7 @@
 - `blog.js` contains JavaScripts that populate the medium blog "embed"
 - `commonElements.js` contains common DOM elements (such as **side bar**) of all pages
 - `initialDarkTheme.js` applies (if appropriate) dark theme before DOM elements creation
-- `main.js` comtains common JavaScript (such has side bar behaviour) of all pages
+- `main.js` comtains common JavaScript (such as **side bar** behaviour) of all pages
 - `style.css` contains common CSS of all pages 
 
 `img` folder contains images
