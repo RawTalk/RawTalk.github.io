@@ -136,7 +136,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 15px;
-        height: 100px;
+        min-height: 100px;
         transition: 0.2s ease all;
         background-clip: content-box;
         background-color: #f8f8f8;
@@ -682,13 +682,10 @@ fetch(calendar_url)
     })
     .then(() => new Promise((resolve) => setTimeout(resolve, 500)))
     .then(function() {
-        let maxHeight = 0
         for (let i = 0; i < calendarItemContainer.childElementCount; i++) {
             const element = calendarItemContainer.children[i]
             element.classList.add('show')
-            if (element.clientHeight > maxHeight) maxHeight = element.clientHeight
         }
-        calendarItemContainer.style.height = `${maxHeight}px`
         calendarItemContainer.style.background = 'inherit'
     })
     .then(() => new Promise((resolve) => setTimeout(resolve, 200)))
