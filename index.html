@@ -651,14 +651,17 @@ fetch(PODCAST_RSS_URL)
 // fetch google calendar event
 const monthStr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const calendarItemContainer = $('#calendarItemContainer')
+
 const calendar_url = "https://rawtalk-calendar-api.herokuapp.com/"
 fetch(calendar_url)
-    .then(response => response.text())
+    .then(res => res.text())
     .then(str => JSON.parse(str))
     .then(function(data) {
-        data = data.slice(0,2) 
+        data = data.slice(0,2)
         data.forEach((ev, i) => {
-            let st = new Date(ev.starttime)
+            let title = ev.summary
+            let link = ev.htmlLink
+            let st = new Date(ev.start.dateTime)
             let month = monthStr[st.getMonth()]
             let date = st.getDate()
             let description = ev.description
@@ -666,7 +669,7 @@ fetch(calendar_url)
                 description = 'Join our WhatsApp group to find out more info.'
             }
             calendarItemContainer.insertAdjacentHTML('beforeend', `
-            <div class="eventItemContainer">
+            <a class="eventItemContainer" href="${link}" target="_blank">
                 <div class="eventItem" style="background-color: ${i%2==0? '#66806A' : '#B4C6A6'};">
                     <div class="dateContainer">
                         <div class="dateContainer__date">${date}</div>
@@ -674,14 +677,14 @@ fetch(calendar_url)
                     </div>
                 </div>
                 <div>
-                    <div class="post__title">${ev.title}</div>
+                    <div class="post__title">${title}</div>
                     <div>${description}</div>
                 </div>
-            </div>
+            </a>
             `)
         })
     })
-    .then(() => new Promise((resolve) => setTimeout(resolve, 500)))
+    .then(() => new Promise((resolve) => setTimeout(resolve, 200)))
     .then(function() {
         for (let i = 0; i < calendarItemContainer.childElementCount; i++) {
             const element = calendarItemContainer.children[i]
@@ -690,13 +693,14 @@ fetch(calendar_url)
         calendarItemContainer.style.background = 'inherit'
         calendarItemContainer.style.maxHeight = '1000px' // high value as max height
     })
-    .then(() => new Promise((resolve) => setTimeout(resolve, 200)))
+    .then(() => new Promise((resolve) => setTimeout(resolve, 100)))
     .then(function() {
         calendarItemContainer.style.transition = 'inherit'
     })
     .catch(function() {
         calendarItemContainer.innerHTML = '<iframe id="calendar__iframe" src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23e3e9fe&amp;ctz=Europe%2FLondon&amp;src=cjEzZ2s4OW1vbG1vbjl2OTg5dm9vcGFzbnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;mode=AGENDA&amp;showTitle=0&amp;showDate=0&amp;showNav=1&amp;showTabs=1&amp;showPrint=0&amp;showCalendars=0" style="border-width:0" width="100%" height="150" frameborder="0" scrolling="no"></iframe>'
         calendarItemContainer.style.display = 'block'
+        calendarItemContainer.style.maxHeight = '1000px' // high value as max height
     })
 
 // typewriter loop
