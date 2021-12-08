@@ -141,6 +141,7 @@
         transition: 0.2s ease all;
         background-clip: content-box;
         background-color: #f8f8f8;
+        margin-bottom: 50px;
     }
     body.dark #calendarItemContainer {
         background-color: #2f343b;  
@@ -148,15 +149,15 @@
     @media (max-width: 1030px) {
         #calendarItemContainer {
             grid-template-columns: 1fr;
-            row-gap: 30px;
         }
     }
     .eventItemContainer {
         display: grid; 
-        grid-template-columns: 100px 1fr; 
+        grid-template-columns: 115px 1fr; 
         gap: 10px; 
         opacity: 0;
         transition: 0.2s ease all;
+        margin-bottom: 0;
     }
     .eventItemContainer.show {
         opacity: 1;
@@ -164,9 +165,10 @@
     .eventItem {
         color: #fff; 
         text-align: center; 
-        border-radius: 10px; 
+        border-radius: 10px 0 0 10px; 
         position: relative; 
-        height: 100px; 
+        height: 100%; 
+        z-index: 5;
     }
     .dateContainer {
         position: absolute; 
@@ -176,19 +178,38 @@
         right: 0;
     }
     .dateContainer__date {
-        font-size: 42px;
+        font-size: 46px;
+        font-weight: 700;
     }
     .dateContainer__month {
         font-size: 28px; 
-        margin-top: -10px; 
+        margin-top: -5px; 
         margin-bottom: 3px;
+        text-transform: uppercase;
     }
-    @media (max-width: 600px) {
+    .eventText {
+        padding: 15px;
+        padding-left: 5px;
+    }
+    .event__date {
+        color: #30413d;
+        background: #dfe9e7;
+        padding: 2px 5px;
+        display: inline-block;
+        border-radius: 5px;
+        position: relative;
+        left: -5px;
+        margin: 10px 0;
+    }
+    .event__date__timezone {
+        font-weight: 400;
+        font-size: 14px;
+        position: relative;
+        top: -2px;
+    }
+    @media (max-width: 900px) {
         .eventItemContainer {
-            grid-template-columns: 50px 1fr;
-        }
-        .eventItem {
-            height: 50px;
+            grid-template-columns: 70px 1fr;
         }
         .dateContainer__date {
         font-size: 24px;
@@ -392,9 +413,10 @@
                 Events
                 <a href="events"><span class="sectionHeaderButton" style="top: auto">view all</span></a>
             </div>
-            <div class="section scrollShow" data-scroll-show-element-percent="20">
-                <div id="calendarItemContainer"></div>
-            </div>
+            <div id="calendarItemContainer"></div>
+            <!-- <div class="section scrollShow" data-scroll-show-element-percent="20">
+                
+            </div> -->
 
             <!-- Latest Podcast -->
             <div class="sectionHeader scrollShow">
@@ -661,6 +683,8 @@ fetch(calendar_url)
             let title = ev.summary
             let link = ev.htmlLink
             let st = new Date(ev.start.dateTime)
+            let et = new Date(ev.end.dateTime)
+            let runtime = `<div class="event__date">${time2HHMM(st)} to ${time2HHMM(et)} <span class="event__date__timezone">(UK Time)</span></div>`
             let month = monthStr[st.getMonth()]
             let date = st.getDate()
             let description = ev.description
@@ -668,17 +692,20 @@ fetch(calendar_url)
                 description = 'Join our WhatsApp group to find out more info.'
             }
             calendarItemContainer.insertAdjacentHTML('beforeend', `
-            <a class="eventItemContainer" href="${link}" target="_blank">
+            <a class="section section--iconText eventItemContainer hoverFillParent" href="${link}" target="_blank" style="position: relative">
                 <div class="eventItem" style="background-color: ${i%2==0? '#66806A' : '#B4C6A6'};">
                     <div class="dateContainer">
                         <div class="dateContainer__date">${date}</div>
                         <div class="dateContainer__month">${month}</div>
                     </div>
                 </div>
-                <div>
+                <div class="eventText">
                     <div class="post__title">${title}</div>
                     <div>${description}</div>
+                    ${runtime}
                 </div>
+                <div class="newTab"></div>
+                <div class="hoverFill hoverFill--blue"></div>
             </a>
             `)
         })
@@ -701,6 +728,10 @@ fetch(calendar_url)
         calendarItemContainer.style.display = 'block'
         calendarItemContainer.style.maxHeight = '1000px' // high value as max height
     })
+
+function time2HHMM(t) {
+    return `${t.getHours().toString().padStart(2,'0')}:${t.getMinutes().toString().padStart(2,'0')}`
+}
 
 // typewriter loop
 const typewriteSpan = $('#typewriteSpan')
