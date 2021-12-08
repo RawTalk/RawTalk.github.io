@@ -654,8 +654,7 @@ const calendarItemContainer = $('#calendarItemContainer')
 
 const calendar_url = "https://rawtalk-calendar-api.herokuapp.com/"
 fetch(calendar_url)
-    .then(res => res.text())
-    .then(str => JSON.parse(str))
+    .then(res => res.json())
     .then(function(data) {
         data = data.slice(0,2)
         data.forEach((ev, i) => {
