@@ -255,19 +255,54 @@ body.dark #topBar {
     box-shadow: 0 0 5px #000a;
 }
 
-#sideBarButton {
-    background: rgb(63, 67, 85);
-    color: #fff;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding: 13px 15px;
-    display: none;
+#hamburger {
+    --bar-height: 3px;
+    --bar-color: #555;
+    --bar-width-start: 80%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
     cursor: pointer;
+    left: 0;
+    top: -1px;
 }
-#sideBarButton:hover {
-    background: rgba(63, 67, 85, 0.9);
+
+body.dark #hamburger {
+    --bar-color: #fff;
+}
+
+#hamburger::before {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    background: var(--bar-color);
+    height: var(--bar-height);
+    width: var(--bar-width-start);
+    top: calc(25% - var(--bar-height)/2);
+    left: calc((100% - var(--bar-width-start))/2);
+}
+
+#hamburger::after {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    background: var(--bar-color);
+    height: var(--bar-height);
+    width: var(--bar-width-start);
+    top: calc(75% - var(--bar-height)/2);
+    left: calc((100% - var(--bar-width-start))/2);
+}
+
+#hamburgerMiddleLine {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    background: var(--bar-color);
+    height: var(--bar-height);
+    width: var(--bar-width-start);
+    top: calc(50% - var(--bar-height)/2);
+    left: calc((100% - var(--bar-width-start))/2);
 }
 
 #topBar__logo {
@@ -500,7 +535,7 @@ body.dark .hoverFill--blue {
         display: block;
     }
 
-    #sideBarButton {
+    #hamburger {
         display: inline-block;
     }
 

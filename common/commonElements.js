@@ -2,8 +2,8 @@ class MySidebar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <div id="topBar">
-                <div id="sideBarButton">
-                    Menu
+                <div id="hamburger">
+                    <div id="hamburgerMiddleLine"></div>
                 </div>
                 <div id="topBar__logo"></div>
             </div>

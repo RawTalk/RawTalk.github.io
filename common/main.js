@@ -1,11 +1,11 @@
 function $(x) {return document.querySelector(x)}
 
-let sideBarButton = $('#sideBarButton')
+let hamburger = $('#hamburger')
 let sideBar = $('#sideBar')
 let modalCover = $('#modalCover')
-sideBarButton.addEventListener('click', function() {
+hamburger.addEventListener('click', function() {
     sideBar.classList.add('show')
-    modalCover.classList.add('show')
+    modalCover.classList.add('show') 
 })
 modalCover.addEventListener('click', function() {
     sideBar.classList.remove('show')
