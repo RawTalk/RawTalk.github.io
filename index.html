@@ -53,6 +53,9 @@
         #hideRegistrationStepsContainer {
             transform: none;
         }
+        #registrationDone {
+            display: none;
+        }
     }
     @media (max-width: 950px) {
         #registrationStepsContainer__gridLayout {
@@ -140,7 +143,7 @@
         max-height: 100px;
         transition: 0.2s ease all;
         background-clip: content-box;
-        background-color: #f8f8f8;
+        background-color: #f3f3f3;
         margin-bottom: 50px;
     }
     body.dark #calendarItemContainer {
@@ -367,7 +370,6 @@
                             on
                         </div>
                         <div id="welcome__socials__icons">
-                            <!-- <a href="https://chat.whatsapp.com/JuRvK8L89568J7TwoWIaZU"  target="_blank"><div class="icon-href"><img src="img/whatsapp.svg"  alt="" class="icon"><br>WhatsApp    </div></a> -->
                             <a href="https://discord.gg/NWmAAtR"                        target="_blank"><div class="icon-href"><img src="img/discord.svg"   alt="" class="icon"><br>Discord     </div></a>
                             <a href="https://t.me/joinchat/HTSAxMuVxM4hS9oH"            target="_blank"><div class="icon-href"><img src="img/telegram.svg"  alt="" class="icon"><br>Telegram    </div></a>
                             <a href="https://www.instagram.com/raw_is_talk"             target="_blank"><div class="icon-href"><img src="img/instagram.svg" alt="" class="icon"><br>Instagram   </div></a>
@@ -411,10 +413,9 @@
                 Events
                 <a href="events"><span class="sectionHeaderButton" style="top: auto">view all</span></a>
             </div>
-            <div id="calendarItemContainer"></div>
-            <!-- <div class="section scrollShow" data-scroll-show-element-percent="20">
-                
-            </div> -->
+            <div id="calendarItemContainer">
+                <!-- JavaScript will populate this with 2 upcoming Google Calendar events -->
+            </div>
 
             <!-- Latest Podcast -->
             <div class="sectionHeader scrollShow">
@@ -761,7 +762,7 @@ typewriter
 // scroll show
 scrollShow.addItems()
 scrollShow.delay = 0.08
-scrollShow.default_element_percent = 50
+scrollShow.default_element_percent = 0
 
 </script>
 </html>
