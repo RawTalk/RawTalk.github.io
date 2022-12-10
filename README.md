@@ -28,7 +28,7 @@ Some components have texts that are fetched (on page load) from other websites (
 
 3. Twitter latest feed.
 
-4. Event items are fetched from [RAW TALK CalendarAPI on HerokuApp](rawtalk-calendar-api.herokuapp.com/), which is a proxy that fetches events data from RAW TALK google calendar ical link. 
+4. Event items are fetched from [RAW TALK CalendarAPI on Cyclic](https://troubled-bass-neckerchief.cyclic.app/), which is a proxy that fetches events data from RAW TALK google calendar ical link. 
 
 5. The year field at the bottom of the side bar is statically set as 2021, but the JavaScript will replace it to the current year. See `main.js` (search `// set year`)
 
