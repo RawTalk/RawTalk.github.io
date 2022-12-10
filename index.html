@@ -308,7 +308,6 @@
         }
     }
     </style>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
 </head>
 <body>
     <script src="common/initialDarkTheme.js"></script>
@@ -461,35 +460,35 @@
                 </div>
             </div>
 
-            <div id="twitterCalendarSplit" style="margin-top: 10px;">
+            <!-- <div id="twitterCalendarSplit" style="margin-top: 10px;">
                 <div>
                     <div class="sectionHeader">Latest Update</div>
                     <div class="section">
-                        <!-- twitter latest feed -->
+                        twitter latest feed
                         
                         <div id="twitterFeed" style="text-align: center;">
                             <a class="twitter-timeline"
-                                data-width="420" 
                                 data-theme="light"
                                 data-tweet-limit="1" 
                                 data-chrome="noheader, nofooter, noborders, transparent, noscrollbar"
                                 href="https://twitter.com/raw_is_talk">
                                 A Twitter List by TwitterDev
                             </a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
                     </div>
                 </div>
 
                 <div></div>
-                <!-- <div id="blogPostsContainer">
+                <div id="blogPostsContainer">
                     <div class="sectionHeader scrollShow" style="position: relative;">
                         Blog
                         <a href="blog"><span class="sectionHeaderButton" style="top: auto">view more</span></a>
                         <div class="section__date" id="blogDate"></div>
                     </div>
                     <div class="scrollShow" id="blogPosts" data-count=1></div>
-                </div> -->
-            </div>
+                </div>
+            </div> -->
 
             <!-- associates -->
             <div class="sectionHeader">
@@ -673,7 +672,7 @@ fetch(PODCAST_RSS_URL)
 const monthStr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const calendarItemContainer = $('#calendarItemContainer')
 
-const calendar_url = "https://rawtalk-calendar-api.herokuapp.com/"
+const calendar_url = "https://troubled-bass-neckerchief.cyclic.app/"
 fetch(calendar_url)
     .then(res => res.json())
     .then(function(data) {
